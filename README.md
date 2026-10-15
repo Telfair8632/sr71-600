@@ -81,4 +81,4 @@ Firmware rebuild instructions (Pico SDK toolchain): see `firmware/README.md`.
 
 ## License
 
-MIT — see `LICENSE`.
+MIT — see `LICENSE`. Third-party reference documents (receiver and motor manuals) used during design are not redistributed in this repository; see `references/sources.json` for their origins.
