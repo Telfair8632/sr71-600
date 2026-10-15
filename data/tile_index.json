@@ -1,0 +1,226 @@
+[
+  {
+    "page": 1,
+    "part": "F02_Elevon_L",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 495,
+    "origin_y_mm": 125
+  },
+  {
+    "page": 2,
+    "part": "F02_Elevon_R",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 495,
+    "origin_y_mm": -207.857142857
+  },
+  {
+    "page": 3,
+    "part": "F01_Wing_chine_NET",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": -210.0
+  },
+  {
+    "page": 4,
+    "part": "F01_Wing_chine_NET",
+    "row": 1,
+    "col": 2,
+    "origin_x_mm": 180,
+    "origin_y_mm": -210.0
+  },
+  {
+    "page": 5,
+    "part": "F01_Wing_chine_NET",
+    "row": 1,
+    "col": 3,
+    "origin_x_mm": 360,
+    "origin_y_mm": -210.0
+  },
+  {
+    "page": 6,
+    "part": "F01_Wing_chine_NET",
+    "row": 1,
+    "col": 4,
+    "origin_x_mm": 540,
+    "origin_y_mm": -210.0
+  },
+  {
+    "page": 7,
+    "part": "F01_Wing_chine_NET",
+    "row": 2,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 25.0
+  },
+  {
+    "page": 8,
+    "part": "F01_Wing_chine_NET",
+    "row": 2,
+    "col": 2,
+    "origin_x_mm": 180,
+    "origin_y_mm": 25.0
+  },
+  {
+    "page": 9,
+    "part": "F01_Wing_chine_NET",
+    "row": 2,
+    "col": 3,
+    "origin_x_mm": 360,
+    "origin_y_mm": 25.0
+  },
+  {
+    "page": 10,
+    "part": "F01_Wing_chine_NET",
+    "row": 2,
+    "col": 4,
+    "origin_x_mm": 540,
+    "origin_y_mm": 25.0
+  },
+  {
+    "page": 11,
+    "part": "F03_Fuselage_side",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 70,
+    "origin_y_mm": 3
+  },
+  {
+    "page": 12,
+    "part": "F03_Fuselage_side",
+    "row": 1,
+    "col": 2,
+    "origin_x_mm": 250,
+    "origin_y_mm": 3
+  },
+  {
+    "page": 13,
+    "part": "F03_Fuselage_side",
+    "row": 1,
+    "col": 3,
+    "origin_x_mm": 430,
+    "origin_y_mm": 3
+  },
+  {
+    "page": 14,
+    "part": "F04_Roof_frame",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 70,
+    "origin_y_mm": -22
+  },
+  {
+    "page": 15,
+    "part": "F04_Roof_frame",
+    "row": 1,
+    "col": 2,
+    "origin_x_mm": 250,
+    "origin_y_mm": -22
+  },
+  {
+    "page": 16,
+    "part": "F04_Roof_frame",
+    "row": 1,
+    "col": 3,
+    "origin_x_mm": 430,
+    "origin_y_mm": -22
+  },
+  {
+    "page": 17,
+    "part": "F05_Battery_hatch",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 18,
+    "part": "F05_Battery_hatch",
+    "row": 1,
+    "col": 2,
+    "origin_x_mm": 180,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 19,
+    "part": "F05_Avionics_hatch",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 20,
+    "part": "W01_Battery_tray",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 95,
+    "origin_y_mm": -17
+  },
+  {
+    "page": 21,
+    "part": "W02_Bulkhead",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 22,
+    "part": "F06_Nacelle_wrap",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 23,
+    "part": "F06_Nacelle_wrap",
+    "row": 1,
+    "col": 2,
+    "origin_x_mm": 180,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 24,
+    "part": "F07_Vertical_fin",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 420,
+    "origin_y_mm": 42
+  },
+  {
+    "page": 25,
+    "part": "F08_Belly_skid",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 510,
+    "origin_y_mm": -14
+  },
+  {
+    "page": 26,
+    "part": "F09_Spike_web",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": 0,
+    "origin_y_mm": 0
+  },
+  {
+    "page": 27,
+    "part": "W03_Motor_firewall",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": -18.0,
+    "origin_y_mm": -18.0
+  },
+  {
+    "page": 28,
+    "part": "W04_Nacelle_former_BLANK",
+    "row": 1,
+    "col": 1,
+    "origin_x_mm": -18.0,
+    "origin_y_mm": -18.0
+  }
+]

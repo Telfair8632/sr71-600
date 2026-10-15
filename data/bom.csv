@@ -1,0 +1,27 @@
+﻿id,item,qty,unit_mass_g,total_mass_g,x_mm,budget_cny,basis,measured_mass_g,measured_x_mm,purchase_status
+AIR01,3 mm unpapered foam blanks / body and wing,1,24,24,330,100,estimated allowance; weigh offcuts and parts,,,NOT ORDERED
+AIR02,2 mm foam nacelle skins and fins,1,12,12,425,50,estimated allowance,,,NOT ORDERED
+STR01,"4x2 mm carbon tube transverse spar, 380 mm",1,5.73,5.73,480,50,rho=1600 kg/m3,,,NOT ORDERED
+STR02,"2 mm carbon rods longitudinal, 2 x 215 mm",1,2.16,2.16,437.5,40,rho=1600 kg/m3,,,NOT ORDERED
+STR03,"1 mm plywood mount rings, rails and tabs",1,8,8,365,100,allowance; actual CAD solids separately listed,,,NOT ORDERED
+PRT01,PETG saddles and local fittings,1,4,4,545,120,STL volume is solid-volume upper bound; <=4g print budget,,,NOT ORDERED
+PWR01,Happymodel EX1103 KV11000 motors,2,3.8,7.6,575.75,220,manufacturer mass; verify mounting drawing,,,NOT ORDERED
+PWR02,2023 two-inch CW/CCW matched prop pair,2,0.8,1.6,588,60,estimate; exact 2023R test combination or retest,,,NOT ORDERED
+PWR03,"15 A 2S ESC, standard PWM, no BEC, <=6 g each",2,6,12,82.5,180,front vented bay; 25x12x5 mm; extended PHASE leads,,,NOT ORDERED
+PWR04,"2S 550 mAh LiPo, <=32 g, >=25 A real burst",1,32,32,125,180,two packs in purchase allowance; ONE aboard,,,NOT ORDERED
+PWR05,"5 V 3 A BEC, <=5 g",1,5,5,295,80,2S compatible; existing 2 A unit only after simultaneous servo stall-load test,,,NOT ORDERED
+CTL01,RadioMaster RP1 V2 ELRS receiver,1,2.2,2.2,315,150,manufacturer mass incl antenna,,,NOT ORDERED
+CTL02A,"Raspberry Pi Pico 2 non-wireless, no headers",1,4,4,325,50,51x21 mm; VSYS from regulated 5 V; UART for receiver and I2C for IMU,,,NOT ORDERED
+CTL02B,MPU6050 breakout with INT pin,1,3,3,300,40,"buy two modules; install one; 3.3 V I2C logic, DATA_RDY interrupt and actual mass must be verified",,,NOT ORDERED
+CTL02C,"SN74AHCT125, carrier, filters and signal harness",1,3,3,325,80,four 3.3-to-5 V outputs; boot-disabled OE; combined carrier/filter/harness target <=3 g,,,NOT ORDERED
+CTL03,EMAX ES9051 class 4.0-5.5 V micro servo,2,4.3,8.6,475,120,"candidate: 19.8x8.9x23.1 mm, >=0.8 kg.cm at 4.8V; verify genuine item and current",,,NOT ORDERED
+CTL04,"Pushrods, horns, tape hinges",1,4,4,498,40,estimate,,,NOT ORDERED
+ASM01,"Wires, XT30, straps and heatshrink",1,10,10,300,100,estimate; long phase leads required,,,NOT ORDERED
+ASM02,Adhesive and belly skid allowance,1,10,10,340,100,track cured adhesive mass; <=10g budget,,,NOT ORDERED
+ASM03,Light finish and cockpit,1,3,3,210,40,thin dark film/paint; visible tip markers,,,NOT ORDERED
+RES01,Unallocated airborne growth allowance,1,20,20,340,0,planning allowance; NOT installed component; CG uncertain,,,NOT ORDERED
+TRIM01,Removable steel nose trim weight,1,16,16,80,40,initial estimate; size by real CG; never exceed measured thrust mass gate,,,NOT ORDERED
+GND01,RadioMaster Pocket ELRS + radio cells,1,0,0,0,650,ground equipment; regional radio variant to be checked,,,NOT ORDERED
+GND02,Balance charger and power supply,1,0,0,0,350,2S balance and storage modes,,,NOT ORDERED
+GND03,"Wattmeter, scale and thrust fixture materials",1,0,0,0,250,ground equipment,,,NOT ORDERED
+GND04,Pico USB cable and soldering consumables,1,0,0,0,40,ground equipment; data-capable USB cable required,,,NOT ORDERED

@@ -1,0 +1,317 @@
+{
+  "checks": [
+    {
+      "name": "FCStd_reopens",
+      "passed": true,
+      "value": 68
+    },
+    {
+      "name": "all_native_shapes_valid",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "total_length_including_prop_envelope_le_600",
+      "passed": true,
+      "value": 590.0
+    },
+    {
+      "name": "span_420",
+      "passed": true,
+      "value": 420.0
+    },
+    {
+      "name": "Nacelle_skin_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Nacelle_skin_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Motor_envelope_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Motor_envelope_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Prop_swept_disc_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Prop_swept_disc_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Elevon_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Elevon_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Carbon_longeron_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Carbon_longeron_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Servo_envelope_symmetric_volume",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "Servo_envelope_symmetric_centers",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "critical_collision_checks",
+      "passed": true,
+      "value": 183
+    },
+    {
+      "name": "carbon_members_do_not_interpenetrate",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_-18_clear_Nacelle_skin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_-18_clear_Vertical_fin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_-18_clear_Prop_swept_disc_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_0_clear_Nacelle_skin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_0_clear_Vertical_fin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_0_clear_Prop_swept_disc_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_18_clear_Nacelle_skin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_18_clear_Vertical_fin_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "L_elevon_18_clear_Prop_swept_disc_L",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_-18_clear_Nacelle_skin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_-18_clear_Vertical_fin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_-18_clear_Prop_swept_disc_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_0_clear_Nacelle_skin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_0_clear_Vertical_fin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_0_clear_Prop_swept_disc_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_18_clear_Nacelle_skin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_18_clear_Vertical_fin_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "R_elevon_18_clear_Prop_swept_disc_R",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "STEP_reimports_valid",
+      "passed": true,
+      "value": 57
+    },
+    {
+      "name": "STEP_length",
+      "passed": true,
+      "value": 583.5000000000066
+    },
+    {
+      "name": "Control_horn_L.stl_closed_solid",
+      "passed": true,
+      "value": 352
+    },
+    {
+      "name": "Control_horn_L.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Control_horn_R.stl_closed_solid",
+      "passed": true,
+      "value": 352
+    },
+    {
+      "name": "Control_horn_R.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Fin_saddle_L_474.stl_closed_solid",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "Fin_saddle_L_474.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Fin_saddle_L_515.stl_closed_solid",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "Fin_saddle_L_515.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Fin_saddle_R_474.stl_closed_solid",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "Fin_saddle_R_474.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Fin_saddle_R_515.stl_closed_solid",
+      "passed": true,
+      "value": 48
+    },
+    {
+      "name": "Fin_saddle_R_515.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Motor_saddle_L.stl_closed_solid",
+      "passed": true,
+      "value": 364
+    },
+    {
+      "name": "Motor_saddle_L.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Motor_saddle_R.stl_closed_solid",
+      "passed": true,
+      "value": 364
+    },
+    {
+      "name": "Motor_saddle_R.stl_origin_on_print_bed",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "printed_solid_volume_fits_4g_budget",
+      "passed": true,
+      "value": 3.8400722395310702
+    },
+    {
+      "name": "budget_CG_inside_provisional_window",
+      "passed": true,
+      "value": 296.0139493418638
+    },
+    {
+      "name": "battery_can_reach_CG_midpoint",
+      "passed": true,
+      "value": 121.42124746943841
+    },
+    {
+      "name": "purchase_budget_le_3500",
+      "passed": true,
+      "value": 3420
+    }
+  ],
+  "details": {
+    "bounding_box_mm": [
+      0.0,
+      -210.0,
+      -14.0,
+      590.0,
+      210.0,
+      95.51414901355255
+    ],
+    "printed_solid_mass_upper_bound_g_PETG_1_27": 3.8400722395310702
+  },
+  "all_digital_checks_pass": true,
+  "flight_release": false,
+  "not_tested": [
+    "actual motor mounts",
+    "real hardware dimensions",
+    "structural loads",
+    "installed thrust",
+    "thermal",
+    "radio fail-safe",
+    "glide stability",
+    "flight"
+  ]
+}

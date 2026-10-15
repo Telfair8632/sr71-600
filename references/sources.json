@@ -1,0 +1,32 @@
+[
+  {
+    "description": "S1 NASA, SR-71 full-scale aircraft dimensions. Used for proportional reference only; not a basis for the model's aerodynamic performance.",
+    "url": "https://www.nasa.gov/image-article/sr-71-takeoff-with-afterburner/",
+    "accessed": "2026-09-11"
+  },
+  {
+    "description": "S2 Happymodel EX1103 KV11000: dimensions, mass and 7.4 V / 2023R bench data.",
+    "url": "https://www.happymodel.cn/index.php/2022/09/05/bassline-spare-part-ex1103-kv11000-brushless-motor/",
+    "accessed": "2026-09-11"
+  },
+  {
+    "description": "S3 HobbyEagle A3 Mini official manual: interfaces, delta-wing mixing, failsafe behavior and output frequency.",
+    "url": "https://www.hobbyeagle.com/manuals/A3MINI_User_Manual_en.pdf",
+    "accessed": "2026-09-11"
+  },
+  {
+    "description": "S4 HobbyEagle CRSF integration guide: compatible firmware and single-wire wiring.",
+    "url": "https://www.hobbyeagle.com/quick_guide/crsf/?lang=zh-cn",
+    "accessed": "2026-09-11"
+  },
+  {
+    "description": "S5 RadioMaster RP1 V2: package envelope, 5 V supply, CRSF, mass including antenna.",
+    "url": "https://www.radiomasterrc.com/products/rp1-expresslrs-2-4ghz-nano-receiver",
+    "accessed": "2026-09-11"
+  },
+  {
+    "description": "S6 RadioMaster Pocket: transmitter series and ELRS versions.",
+    "url": "https://radiomasterrc.com/products/pocket-radio-controller-m2",
+    "accessed": "2026-09-11"
+  }
+]

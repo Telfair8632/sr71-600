@@ -1,0 +1,2859 @@
+{
+  "parts": [
+    {
+      "name": "Elevon_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9771.42857142,
+      "center_of_mass_mm": [
+        514.8830409356783,
+        165.71846282368986,
+        1.5
+      ],
+      "bbox": [
+        495.0,
+        125.0,
+        0.0,
+        535.0,
+        207.857142857,
+        3.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Elevon_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9771.42857142,
+      "center_of_mass_mm": [
+        514.8830409356783,
+        -165.71846282368986,
+        1.5
+      ],
+      "bbox": [
+        495.0,
+        -207.857142857,
+        0.0,
+        535.0,
+        -125.0,
+        3.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Wing_chine_base",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 285737.27089842333,
+      "center_of_mass_mm": [
+        384.21621879356826,
+        -1.342841806684718e-09,
+        1.4989483832597796
+      ],
+      "bbox": [
+        0.0,
+        -210.0,
+        0.0,
+        570.0,
+        210.0,
+        3.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fuselage_side_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 25740.0,
+      "center_of_mass_mm": [
+        265.0,
+        20.5,
+        14.0
+      ],
+      "bbox": [
+        70.0,
+        19.0,
+        3.0,
+        460.0,
+        22.0,
+        25.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fuselage_side_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 25740.0,
+      "center_of_mass_mm": [
+        265.0,
+        -20.5,
+        14.0
+      ],
+      "bbox": [
+        70.0,
+        -22.0,
+        3.0,
+        460.0,
+        -19.0,
+        25.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fuselage_roof_frame",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14316.0,
+      "center_of_mass_mm": [
+        325.5037720033529,
+        -7.717895739780356e-16,
+        26.5
+      ],
+      "bbox": [
+        70.0,
+        -22.0,
+        25.0,
+        460.0,
+        22.0,
+        28.0
+      ],
+      "material": "3 mm foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Battery_hatch",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 23346.72,
+      "center_of_mass_mm": [
+        178.00000000000003,
+        -2.210752702118913e-16,
+        26.500000000000004
+      ],
+      "bbox": [
+        73.4,
+        -18.6,
+        25.0,
+        282.6,
+        18.6,
+        28.0
+      ],
+      "material": "3 mm foam; tape hinge and front locking tab",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Avionics_hatch",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12856.32,
+      "center_of_mass_mm": [
+        357.0,
+        1.4391779948844624e-16,
+        26.500000000000004
+      ],
+      "bbox": [
+        299.4,
+        -18.6,
+        25.0,
+        414.59999999999997,
+        18.6,
+        28.0
+      ],
+      "material": "3 mm foam; tape hinge and front locking tab",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nose_carve_block",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 29172.5,
+      "center_of_mass_mm": [
+        52.24105178964208,
+        -2.494086673221897e-16,
+        10.511635172965404
+      ],
+      "bbox": [
+        0.0,
+        -22.0,
+        0.0,
+        70.0,
+        22.0,
+        28.0
+      ],
+      "material": "foam carve block; hollow/trim to mass budget",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Tail_carve_block",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 40263.333333333336,
+      "center_of_mass_mm": [
+        487.7473300769931,
+        -1.8062103403852864e-16,
+        11.873209702789966
+      ],
+      "bbox": [
+        460.0,
+        -22.0,
+        3.0,
+        570.0,
+        22.0,
+        28.0
+      ],
+      "material": "foam carve block; hollow/trim to mass budget",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Cockpit_foam",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 19526.333333333332,
+      "center_of_mass_mm": [
+        147.4287457962751,
+        -7.864561469100786e-17,
+        32.85797384728316
+      ],
+      "bbox": [
+        90.0,
+        -10.0,
+        22.0,
+        213.0,
+        10.0,
+        42.0
+      ],
+      "material": "light foam; fit underside to fuselage",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Battery_tray",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6145.999999999999,
+      "center_of_mass_mm": [
+        187.31256101529468,
+        3.6995391383539226e-17,
+        3.5000000000000004
+      ],
+      "bbox": [
+        95.0,
+        -17.0,
+        3.0,
+        280.0,
+        17.0,
+        4.0
+      ],
+      "material": "1 mm plywood",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Bulkhead_98",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 356.00000000000006,
+      "center_of_mass_mm": [
+        98.49999999999994,
+        1.4693302754273663e-15,
+        15.348314606741571
+      ],
+      "bbox": [
+        98.0,
+        -19.0,
+        3.0,
+        99.0,
+        19.0,
+        25.0
+      ],
+      "material": "1 mm plywood",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Bulkhead_287",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 356.00000000000006,
+      "center_of_mass_mm": [
+        287.50000000000006,
+        1.4693302754273663e-15,
+        15.348314606741571
+      ],
+      "bbox": [
+        287.0,
+        -19.0,
+        3.0,
+        288.0,
+        19.0,
+        25.0
+      ],
+      "material": "1 mm plywood",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Bulkhead_419",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 356.00000000000006,
+      "center_of_mass_mm": [
+        419.4999999999998,
+        1.4693302754273663e-15,
+        15.348314606741571
+      ],
+      "bbox": [
+        419.0,
+        -19.0,
+        3.0,
+        420.0,
+        19.0,
+        25.0
+      ],
+      "material": "1 mm plywood",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Carbon_main_spar",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3581.415625092378,
+      "center_of_mass_mm": [
+        479.9999999999999,
+        -9.869763369425696e-15,
+        4.000000000000001
+      ],
+      "bbox": [
+        478.00062163599836,
+        -190.0,
+        2.0,
+        481.99937836400164,
+        190.0,
+        6.0
+      ],
+      "material": "carbon tube OD4 ID2; bonded above/below foam locally",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Carbon_longeron_L",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 675.4424205218052,
+      "center_of_mass_mm": [
+        437.49999999999994,
+        95.0,
+        0.9999999999999997
+      ],
+      "bbox": [
+        330.0,
+        94.00013111633437,
+        0.0005244309544850667,
+        545.0,
+        95.99986888366563,
+        2.0
+      ],
+      "material": "carbon rod OD2",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_skin_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 57261.7477035748,
+      "center_of_mass_mm": [
+        422.0000000000009,
+        95.00000000000016,
+        23.63078668265874
+      ],
+      "bbox": [
+        278.0,
+        75.0,
+        2.679491924311229,
+        566.0,
+        115.0,
+        40.0
+      ],
+      "material": "2 mm rolled foam, 300 deg wrap; trim to base",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Intake_spike_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6348.5304343742555,
+      "center_of_mass_mm": [
+        267.4774346793349,
+        95.00000000000001,
+        20.0
+      ],
+      "bbox": [
+        238.0,
+        83.0037298159902,
+        7.999999999999998,
+        278.0,
+        106.9962701840098,
+        32.0
+      ],
+      "material": "foam carve; NOT functional supersonic inlet",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Spike_web_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2310.0,
+      "center_of_mass_mm": [
+        296.5,
+        95.0,
+        10.5
+      ],
+      "bbox": [
+        258.0,
+        94.0,
+        3.0,
+        335.0,
+        96.0,
+        18.0
+      ],
+      "material": "2 mm foam; reaches wing at x335",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_L_285",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        285.4999999999998,
+        95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        285.0,
+        77.00021546676662,
+        3.0,
+        286.0,
+        112.99978453323338,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_L_430",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        430.50000000000006,
+        95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        430.0,
+        77.00021546676662,
+        3.0,
+        431.0,
+        112.99978453323338,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_L_548",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        548.5000000000003,
+        95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        548.0,
+        77.00021546676662,
+        3.0,
+        549.0,
+        112.99978453323338,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Motor_firewall_L",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1979.2033717615695,
+      "center_of_mass_mm": [
+        567.0,
+        95.0,
+        20.000000000000004
+      ],
+      "bbox": [
+        566.0,
+        77.00559472398531,
+        2.0,
+        568.0,
+        112.9944052760147,
+        38.0
+      ],
+      "material": "laminated 2 x 1mm plywood",
+      "status": "MOTOR BOLT PATTERN MUST BE VERIFIED"
+    },
+    {
+      "name": "Motor_saddle_L",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1146.8941920461527,
+      "center_of_mass_mm": [
+        555.5507061890827,
+        95.00000000000003,
+        6.6383574495018145
+      ],
+      "bbox": [
+        533.0,
+        90.0,
+        0.0,
+        566.0,
+        100.0,
+        26.0
+      ],
+      "material": "PETG; load-test before use",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Vertical_fin_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 13552.5,
+      "center_of_mass_mm": [
+        489.96107729201253,
+        89.17120030965849,
+        63.753376591496206
+      ],
+      "bbox": [
+        420.0,
+        79.31606377992776,
+        41.61177143234622,
+        543.0,
+        96.44888873943358,
+        95.51414901355257
+      ],
+      "material": "3 mm foam; 15 deg inward cant",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fin_saddle_L_474",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 123.25803433147664,
+      "center_of_mass_mm": [
+        476.0,
+        95.15325764323542,
+        42.094954601181065
+      ],
+      "bbox": [
+        474.0,
+        91.0,
+        39.59591794226542,
+        478.0,
+        99.0,
+        45.0
+      ],
+      "material": "PETG",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fin_saddle_L_515",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 123.25803433147664,
+      "center_of_mass_mm": [
+        517.0,
+        95.15325764323542,
+        42.094954601181065
+      ],
+      "bbox": [
+        515.0,
+        91.0,
+        39.59591794226542,
+        519.0,
+        99.0,
+        45.0
+      ],
+      "material": "PETG",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Belly_skid_L",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3666.0,
+      "center_of_mass_mm": [
+        539.3797054009822,
+        95.00000000000003,
+        -6.913256955810147
+      ],
+      "bbox": [
+        510.0,
+        92.0,
+        -14.0,
+        568.0,
+        98.0,
+        0.0
+      ],
+      "material": "laminated foam + tape wear strip",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Motor_envelope_L",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2218.651636827367,
+      "center_of_mass_mm": [
+        575.7499999999999,
+        95.0,
+        20.0
+      ],
+      "bbox": [
+        568.0,
+        88.25209802149449,
+        13.25,
+        583.5,
+        101.74790197850551,
+        26.75
+      ],
+      "material": "EX1103 envelope; shaft/mount verify",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Prop_swept_disc_L",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8107.319665559964,
+      "center_of_mass_mm": [
+        588.0,
+        94.99999999999999,
+        19.999999999999996
+      ],
+      "bbox": [
+        586.0,
+        69.60789477717927,
+        -5.399999999999999,
+        590.0,
+        120.39210522282073,
+        45.400000000000006
+      ],
+      "material": "purchased prop sweep; NEVER print this disc",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Prop_visual_L",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 571.391999999995,
+      "center_of_mass_mm": [
+        587.9999999999998,
+        94.99999999999999,
+        19.999999999999996
+      ],
+      "bbox": [
+        586.8,
+        69.6,
+        -5.4,
+        589.1999999999999,
+        120.39999999999999,
+        45.4
+      ],
+      "material": "illustrative only; actual 2023 three-blade prop differs",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Servo_envelope_L",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4070.682000000005,
+      "center_of_mass_mm": [
+        475.40000000000003,
+        145.00000000000003,
+        10.55
+      ],
+      "bbox": [
+        465.5,
+        140.55,
+        -1.0,
+        485.3,
+        149.45000000000002,
+        22.1
+      ],
+      "material": "EMAX ES9051 candidate envelope; surface mount and verify tabs",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Pushrod_L",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14.074335088082256,
+      "center_of_mass_mm": [
+        493.0000000000001,
+        145.0,
+        13.000000000000004
+      ],
+      "bbox": [
+        479.0,
+        144.60032440073138,
+        12.601297076746317,
+        507.0,
+        145.39967559926862,
+        13.4
+      ],
+      "material": "0.8 mm wire; bend ends to actual arms",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Control_horn_L",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.4292036732051,
+      "center_of_mass_mm": [
+        505.4933682053156,
+        145.00000000000003,
+        8.96020923189361
+      ],
+      "bbox": [
+        503.0,
+        144.0,
+        3.0,
+        508.0,
+        146.0,
+        15.0
+      ],
+      "material": "PETG; fit to actual pushrod",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Carbon_longeron_R",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 675.4424205218052,
+      "center_of_mass_mm": [
+        437.49999999999994,
+        -95.0,
+        0.9999999999999997
+      ],
+      "bbox": [
+        330.0,
+        -95.99986888366563,
+        0.0005244309544850667,
+        545.0,
+        -94.00013111633437,
+        1.9999999999999998
+      ],
+      "material": "carbon rod OD2",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_skin_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 57261.74770357481,
+      "center_of_mass_mm": [
+        422.0000000000025,
+        -95.00000000000026,
+        23.630786682658755
+      ],
+      "bbox": [
+        278.0,
+        -115.0,
+        2.679491924311229,
+        566.0,
+        -75.0,
+        40.0
+      ],
+      "material": "2 mm rolled foam, 300 deg wrap; trim to base",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Intake_spike_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6348.5304343742555,
+      "center_of_mass_mm": [
+        267.4774346793349,
+        -95.00000000000001,
+        20.0
+      ],
+      "bbox": [
+        238.0,
+        -106.9962701840098,
+        7.999999999999998,
+        278.0,
+        -83.0037298159902,
+        31.999999999999996
+      ],
+      "material": "foam carve; NOT functional supersonic inlet",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Spike_web_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2310.0,
+      "center_of_mass_mm": [
+        296.5,
+        -95.0,
+        10.5
+      ],
+      "bbox": [
+        258.0,
+        -96.0,
+        3.0,
+        335.0,
+        -94.0,
+        18.0
+      ],
+      "material": "2 mm foam; reaches wing at x335",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_R_285",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        285.4999999999998,
+        -95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        285.0,
+        -112.99978453323338,
+        3.0,
+        286.0,
+        -77.00021546676662,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_R_430",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        430.50000000000006,
+        -95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        430.0,
+        -112.99978453323338,
+        3.0,
+        431.0,
+        -77.00021546676662,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Nacelle_former_R_548",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 205.6953014224406,
+      "center_of_mass_mm": [
+        548.5000000000003,
+        -95.00000000000009,
+        20.67109875943231
+      ],
+      "bbox": [
+        548.0,
+        -112.99978453323338,
+        3.0,
+        549.0,
+        -77.00021546676662,
+        38.0
+      ],
+      "material": "1 mm plywood; final fit to rolled foam",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Motor_firewall_R",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1979.2033717615695,
+      "center_of_mass_mm": [
+        567.0,
+        -95.0,
+        20.000000000000004
+      ],
+      "bbox": [
+        566.0,
+        -112.99440527601469,
+        2.0,
+        568.0,
+        -77.0055947239853,
+        38.0
+      ],
+      "material": "laminated 2 x 1mm plywood",
+      "status": "MOTOR BOLT PATTERN MUST BE VERIFIED"
+    },
+    {
+      "name": "Motor_saddle_R",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1146.8941920461527,
+      "center_of_mass_mm": [
+        555.5507061890827,
+        -95.00000000000001,
+        6.6383574495018145
+      ],
+      "bbox": [
+        533.0,
+        -100.0,
+        0.0,
+        566.0,
+        -90.0,
+        26.0
+      ],
+      "material": "PETG; load-test before use",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Vertical_fin_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 13552.499999999998,
+      "center_of_mass_mm": [
+        489.9610772920126,
+        -89.17120030965849,
+        63.75337659149619
+      ],
+      "bbox": [
+        420.0,
+        -96.4488887394336,
+        41.61177143234622,
+        543.0,
+        -79.31606377992773,
+        95.51414901355255
+      ],
+      "material": "3 mm foam; 15 deg inward cant",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fin_saddle_R_474",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 123.25803433147657,
+      "center_of_mass_mm": [
+        476.0000000000001,
+        -95.15325764323545,
+        42.09495460118107
+      ],
+      "bbox": [
+        474.0,
+        -99.0,
+        39.59591794226542,
+        478.0,
+        -91.0,
+        45.0
+      ],
+      "material": "PETG",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Fin_saddle_R_515",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 123.25803433147657,
+      "center_of_mass_mm": [
+        517.0000000000001,
+        -95.15325764323545,
+        42.09495460118107
+      ],
+      "bbox": [
+        515.0,
+        -99.0,
+        39.59591794226542,
+        519.0,
+        -91.0,
+        45.0
+      ],
+      "material": "PETG",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Belly_skid_R",
+      "group": "Foam",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 3666.0,
+      "center_of_mass_mm": [
+        539.3797054009822,
+        -95.00000000000003,
+        -6.913256955810147
+      ],
+      "bbox": [
+        510.0,
+        -98.0,
+        -14.0,
+        568.0,
+        -92.0,
+        0.0
+      ],
+      "material": "laminated foam + tape wear strip",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Motor_envelope_R",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2218.651636827367,
+      "center_of_mass_mm": [
+        575.7499999999999,
+        -95.0,
+        20.0
+      ],
+      "bbox": [
+        568.0,
+        -101.74790197850551,
+        13.25,
+        583.5,
+        -88.25209802149449,
+        26.75
+      ],
+      "material": "EX1103 envelope; shaft/mount verify",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Prop_swept_disc_R",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 8107.319665559964,
+      "center_of_mass_mm": [
+        588.0,
+        -94.99999999999999,
+        20.000000000000004
+      ],
+      "bbox": [
+        586.0,
+        -120.39210522282073,
+        -5.399999999999999,
+        590.0,
+        -69.60789477717927,
+        45.39999999999999
+      ],
+      "material": "purchased prop sweep; NEVER print this disc",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Prop_visual_R",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 571.391999999995,
+      "center_of_mass_mm": [
+        588.0000000000001,
+        -94.99999999999999,
+        20.0
+      ],
+      "bbox": [
+        586.8,
+        -120.4,
+        -5.4,
+        589.1999999999999,
+        -69.60000000000001,
+        45.4
+      ],
+      "material": "illustrative only; actual 2023 three-blade prop differs",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Servo_envelope_R",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4070.682000000005,
+      "center_of_mass_mm": [
+        475.40000000000003,
+        -144.99999999999997,
+        10.55
+      ],
+      "bbox": [
+        465.5,
+        -149.45,
+        -1.0,
+        485.3,
+        -140.54999999999998,
+        22.1
+      ],
+      "material": "EMAX ES9051 candidate envelope; surface mount and verify tabs",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Pushrod_R",
+      "group": "Structure",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 14.074335088082256,
+      "center_of_mass_mm": [
+        493.0000000000001,
+        -145.0,
+        13.000000000000004
+      ],
+      "bbox": [
+        479.0,
+        -145.39967559926862,
+        12.601297076746317,
+        507.0,
+        -144.60032440073138,
+        13.4
+      ],
+      "material": "0.8 mm wire; bend ends to actual arms",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Control_horn_R",
+      "group": "Printed",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 118.4292036732051,
+      "center_of_mass_mm": [
+        505.4933682053156,
+        -145.00000000000003,
+        8.96020923189361
+      ],
+      "bbox": [
+        503.0,
+        -146.0,
+        3.0,
+        508.0,
+        -144.0,
+        15.0
+      ],
+      "material": "PETG; fit to actual pushrod",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Battery_envelope",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 28800.0,
+      "center_of_mass_mm": [
+        125.0,
+        -2.2303146983580923e-16,
+        13.0
+      ],
+      "bbox": [
+        95.0,
+        -15.0,
+        5.0,
+        155.0,
+        15.0,
+        21.0
+      ],
+      "material": "2S550mAh; envelope and mass provisional",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "ESC_envelope_L",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1500.0,
+      "center_of_mass_mm": [
+        82.5,
+        8.0,
+        7.5
+      ],
+      "bbox": [
+        70.0,
+        2.0,
+        5.0,
+        95.0,
+        14.0,
+        10.0
+      ],
+      "material": "15A PWM no BEC; vented front bay",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "ESC_envelope_R",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1500.0,
+      "center_of_mass_mm": [
+        82.5,
+        -7.999999999999999,
+        7.5
+      ],
+      "bbox": [
+        70.0,
+        -14.0,
+        5.0,
+        95.0,
+        -2.0,
+        10.0
+      ],
+      "material": "15A PWM no BEC; vented front bay",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "BEC_envelope",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1680.0,
+      "center_of_mass_mm": [
+        295.0,
+        2.5376526277146434e-16,
+        8.0
+      ],
+      "bbox": [
+        285.0,
+        -7.0,
+        5.0,
+        305.0,
+        7.0,
+        11.0
+      ],
+      "material": "regulated 5V2A",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Receiver_envelope",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 429.0,
+      "center_of_mass_mm": [
+        315.0,
+        -7.401486830834377e-17,
+        6.5
+      ],
+      "bbox": [
+        308.5,
+        -5.5,
+        5.0,
+        321.5,
+        5.5,
+        8.0
+      ],
+      "material": "RP1 V2",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Gyro_envelope",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 4387.5,
+      "center_of_mass_mm": [
+        325.0,
+        4.2834997973457893e-16,
+        13.75
+      ],
+      "bbox": [
+        310.0,
+        -9.75,
+        10.0,
+        340.0,
+        9.75,
+        17.5
+      ],
+      "material": "A3 Mini; receiver below front end with >=2mm clearance",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Future_chute_zone",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 27200.0,
+      "center_of_mass_mm": [
+        393.0,
+        6.238147253658527e-16,
+        14.0
+      ],
+      "bbox": [
+        373.0,
+        -17.0,
+        4.0,
+        413.0,
+        17.0,
+        24.0
+      ],
+      "material": "SPACE ONLY; no parachute/anchor load rating",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Battery_adjustment_zone",
+      "group": "Keepouts",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 76800.0,
+      "center_of_mass_mm": [
+        170.0,
+        -6.010007306637514e-16,
+        13.0
+      ],
+      "bbox": [
+        90.0,
+        -15.0,
+        5.0,
+        250.0,
+        15.0,
+        21.0
+      ],
+      "material": "battery center x=120..220; straps and wiring must clear full range",
+      "status": "PROTOTYPE"
+    },
+    {
+      "name": "Removable_trim_steel",
+      "group": "Equipment",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2039.9999999999998,
+      "center_of_mass_mm": [
+        80.0,
+        -1.7415263131375007e-17,
+        -2.5499999999999994
+      ],
+      "bbox": [
+        70.0,
+        -10.0,
+        -5.1,
+        90.0,
+        10.0,
+        0.0
+      ],
+      "material": "16g steel allowance; tape-secured and adjusted after weighing",
+      "status": "PROTOTYPE"
+    }
+  ],
+  "collision_checks": [
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Elevon_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Elevon_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Wing_chine_base"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nose_carve_block"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Tail_carve_block"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Cockpit_foam"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Bulkhead_98"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Bulkhead_287"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Bulkhead_419"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Carbon_main_spar"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Carbon_longeron_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_skin_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Intake_spike_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Spike_web_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_L_285"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_L_430"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_L_548"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Motor_firewall_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Motor_saddle_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Vertical_fin_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fin_saddle_L_474"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fin_saddle_L_515"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Belly_skid_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Pushrod_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Control_horn_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Carbon_longeron_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_skin_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Intake_spike_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Spike_web_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_R_285"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_R_430"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Nacelle_former_R_548"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Motor_firewall_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Motor_saddle_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Vertical_fin_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fin_saddle_R_474"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Fin_saddle_R_515"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Belly_skid_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Pushrod_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_L",
+        "Control_horn_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Elevon_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Elevon_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Wing_chine_base"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nose_carve_block"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Tail_carve_block"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Cockpit_foam"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Bulkhead_98"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Bulkhead_287"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Bulkhead_419"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Carbon_main_spar"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Carbon_longeron_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_skin_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Intake_spike_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Spike_web_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_L_285"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_L_430"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_L_548"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Motor_firewall_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Motor_saddle_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Vertical_fin_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fin_saddle_L_474"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fin_saddle_L_515"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Belly_skid_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Pushrod_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Control_horn_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Carbon_longeron_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_skin_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Intake_spike_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Spike_web_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_R_285"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_R_430"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Nacelle_former_R_548"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Motor_firewall_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Motor_saddle_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Vertical_fin_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fin_saddle_R_474"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Fin_saddle_R_515"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Belly_skid_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Pushrod_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Prop_swept_disc_R",
+        "Control_horn_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Fuselage_side_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Fuselage_side_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Fuselage_roof_frame"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Battery_tray"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Battery_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Avionics_hatch"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Servo_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Motor_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Servo_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Battery_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "ESC_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_L",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Motor_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Servo_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Battery_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "ESC_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_L",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "Servo_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "Battery_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "ESC_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Motor_envelope_R",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "Battery_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "ESC_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Servo_envelope_R",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "ESC_envelope_L"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Battery_envelope",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "ESC_envelope_R"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_L",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "BEC_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "ESC_envelope_R",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Receiver_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "BEC_envelope",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Gyro_envelope"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Receiver_envelope",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    },
+    {
+      "pair": [
+        "Gyro_envelope",
+        "Removable_trim_steel"
+      ],
+      "intersection_mm3": 0.0,
+      "pass_check": true
+    }
+  ],
+  "flight_release": false,
+  "all_shapes_valid": true,
+  "critical_collisions_clear": true
+}

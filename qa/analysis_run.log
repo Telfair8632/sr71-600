@@ -1,0 +1,48 @@
+{
+  "revision": "V1.0-P0",
+  "reference_area_mm2": 103115.0,
+  "reference_area_dm2": 10.3115,
+  "outline_area_mm2": 103115.0,
+  "aspect_ratio": 1.7107113417058624,
+  "mac_mm": 316.569707476245,
+  "mac_le_x_mm": 235.26514862069044,
+  "quarter_chord_x_mm": 314.4075754897517,
+  "wing_only_quarter_chord_x_mm": 363.26632960114665,
+  "initial_cg_x_mm": [
+    292.24769596641454,
+    298.57909011593944
+  ],
+  "estimated_mass_g": 190.75,
+  "estimated_cg_x_mm": 294.7019659239843,
+  "battery_x_for_cg_midpoint_mm": 129.24077258139073,
+  "battery_adjustable_cg_x_mm": [
+    294.7019659239843,
+    310.6390563564876
+  ],
+  "wing_loading_g_dm2": 18.4987635164622,
+  "clmax_sensitivity_speed_m_s": {
+    "0.6": 7.025917021779363,
+    "0.8": 6.084622625742433,
+    "1.0": 5.442251923437337
+  },
+  "max_manufacturer_pair_thrust_g": 243.8,
+  "manufacturer_static_thrust_weight_ratio": 1.2781127129750984,
+  "thrust_ratio_20pct_install_loss": 1.0224901703800788,
+  "manufacturer_max_pair_current_A": 18.4,
+  "peak_nominal_power_W": 136.16,
+  "endurance_min_sensitivity": {
+    "4": 6.6,
+    "6": 4.4,
+    "8": 3.3,
+    "18.4": 1.4347826086956523
+  },
+  "motor_out_yaw_Nm": 0.11356591032499999,
+  "spar_tip_load_N": 2.8059277312499997,
+  "spar_root_moment_Nm": 0.5331262689374999,
+  "spar_stress_MPa": 90.50632639311176,
+  "spar_tip_deflection_mm": 7.779234244741274,
+  "spar_modulus_assumption_GPa": 70,
+  "estimated_purchase_cny": 3400,
+  "foam_plate_raw_mass_g": 12.3738,
+  "flight_release": false
+}

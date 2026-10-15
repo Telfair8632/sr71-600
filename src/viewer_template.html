@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SR-71 / 600 Engineering Model</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#edf1f4;color:#163245;font:15px system-ui,Arial,sans-serif}header{padding:24px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #cdd8df}h1{margin:0;font-size:26px}small{color:#647b89}main{display:grid;grid-template-columns:1fr 310px;height:calc(100vh - 105px)}canvas{width:100%;height:100%;touch-action:none}aside{padding:22px;background:#f9fbfc;overflow:auto}button{margin:4px 5px 8px 0;padding:8px 12px;border:1px solid #b8cbd6;border-radius:6px;background:white;color:#163245;cursor:pointer}button:hover{background:#dbe8ef}label{display:block;margin:12px 0}p{line-height:1.7}.badge{background:#fff0d7;padding:7px 10px;border-radius:5px;color:#875410;font-size:12px}dt{color:#657c8c;margin-top:12px}dd{margin:3px 0;font-size:20px;font-weight:600}a{color:#087b99}.foot{font-size:12px;border-top:1px solid #d8e2e8;padding-top:12px}@media(max-width:700px){main{grid-template-columns:1fr;height:auto}canvas{height:58vh}header{padding:16px}aside{padding:16px}}</style>
+<header><div><h1>SR-71 / 600</h1><small>Twin pusher propellers · Lightweight foam structure · V1.0-P0</small></div><span class="badge">Digital prototype / Not released for flight</span></header>
+<main><canvas id="view" aria-label="Draggable 3D RC aircraft model"></canvas><aside>
+<button id="iso">Iso view</button><button id="top">Top view</button><button id="side">Side view</button><button id="front">Front view</button>
+<label><input id="cut" type="checkbox">Open hatches and nacelle skins</label><label><input id="keep" type="checkbox">Show prop discs and reserved space</label><label><input id="wire" type="checkbox">Show wireframe edges</label>
+<p>Drag to rotate, scroll to zoom. Orange = battery, cyan = printed parts, gold = structural members.</p>
+<dl><dt>Overall envelope length</dt><dd>590 mm / limit 600</dd><dt>Wingspan</dt><dd>420 mm</dd><dt>Powerplant axis spacing</dt><dd>190 mm</dd><dt>Propellers</dt><dd>2 × 50.8 mm</dd></dl>
+<p class="foot">This is an offline preview of the actual CAD geometry, not an aerodynamic simulation. Equipment is shown as installation envelopes; the red cross only indicates the propeller disc, not a manufacturable blade.</p>
+<p><a href="docs/engineering_report.pdf">Engineering report</a><br><a href="docs/assembly_dimensions.pdf">Dimension drawings</a><br><a href="cad/SR71_600_P0.FCStd">FreeCAD model</a><br><a href="cad/SR71_600_P0.step">STEP model</a><br><a href="docs/cutting_templates_1to1.pdf">1:1 cutting templates</a><br><a href="data/procurement_budget.md">Procurement budget list</a></p><p id="status" class="foot"></p></aside></main>
+<script>
+const meshes=__DATA__;
+const canvas=document.getElementById('view'),gl=canvas.getContext('webgl',{antialias:true,alpha:false});
+const status=document.getElementById('status');
+if(!gl){status.textContent='WebGL is not enabled in this browser; open docs/overview.png or the FreeCAD model instead.';}
+else{
+const vertex='attribute vec3 p;attribute vec3 n;attribute vec3 color;uniform vec2 size;uniform vec2 angle;uniform float scale;uniform float wire;varying vec3 c;void main(){vec3 v=p-vec3(290.,0.,25.);float cy=cos(angle.x),sy=sin(angle.x),cp=cos(angle.y),sp=sin(angle.y);float x=v.x*cy-v.y*sy;float y=v.x*sy+v.y*cy;float h=y*cp+v.z*sp;float d=-y*sp+v.z*cp;gl_Position=vec4(x*2.*scale/size.x,h*2.*scale/size.y,-d/1000.-wire*.0001,1.);float l=.58+.42*abs(dot(normalize(n),normalize(vec3(-.3,-.4,.866))));c=mix(color*l+vec3(.035),vec3(.08,.20,.27),wire);}';
+const fragment='precision mediump float;varying vec3 c;uniform float alpha;void main(){gl_FragColor=vec4(c,alpha);}';
+function shader(type,src){let s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s}
+const prog=gl.createProgram();gl.attachShader(prog,shader(gl.VERTEX_SHADER,vertex));gl.attachShader(prog,shader(gl.FRAGMENT_SHADER,fragment));gl.linkProgram(prog);if(!gl.getProgramParameter(prog,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(prog));gl.useProgram(prog);
+const loc={};for(const k of ['size','angle','scale','wire','alpha'])loc[k]=gl.getUniformLocation(prog,k);
+const attrs=['p','n','color'].map(k=>gl.getAttribLocation(prog,k));
+const gpu=meshes.map(m=>{let data=[],lines=[];for(const t of m.triangles){let a=m.vertices[t[0]],b=m.vertices[t[1]],c=m.vertices[t[2]],u=b.map((v,i)=>v-a[i]),v=c.map((v,i)=>v-a[i]);let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];if(Math.hypot(...n)<1e-12)n=[0,0,1];const vertices=t.map(i=>[...m.vertices[i],...n,...m.color]);for(const q of vertices)data.push(...q);for(const i of [0,1,1,2,2,0])lines.push(...vertices[i]);}function buf(a){let b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(a),gl.STATIC_DRAW);return b}return{...m,buffer:buf(data),count:data.length/9,lines:buf(lines),lineCount:lines.length/9}});
+let yaw=.55,pitch=.92,zoom=1,down=null;
+const skip=new Set(['Fuselage_roof_frame','Battery_hatch','Avionics_hatch','Cockpit_foam','Nacelle_skin_L','Nacelle_skin_R']);
+function bind(b){gl.bindBuffer(gl.ARRAY_BUFFER,b);attrs.forEach((l,i)=>{gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,3,gl.FLOAT,false,36,i*12)})}
+function draw(){const r=canvas.getBoundingClientRect(),d=devicePixelRatio||1;canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);gl.viewport(0,0,canvas.width,canvas.height);gl.clearColor(237/255,241/255,244/255,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.uniform2f(loc.size,r.width,r.height);gl.uniform2f(loc.angle,yaw,pitch);gl.uniform1f(loc.scale,Math.min(r.width/800,r.height/640)*zoom);gl.uniform1f(loc.wire,0);gl.uniform1f(loc.alpha,1);gl.depthMask(true);gl.disable(gl.BLEND);
+let show=gpu.filter(m=>!(document.getElementById('cut').checked&&skip.has(m.name)));let physical=show.filter(m=>m.group!=='Keepouts'||m.name.startsWith('Prop_visual'));
+for(const m of physical){bind(m.buffer);gl.drawArrays(gl.TRIANGLES,0,m.count)}
+if(document.getElementById('wire').checked){gl.uniform1f(loc.wire,1);for(const m of physical){bind(m.lines);gl.drawArrays(gl.LINES,0,m.lineCount)}gl.uniform1f(loc.wire,0)}
+if(document.getElementById('keep').checked){gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.depthMask(false);gl.uniform1f(loc.alpha,.16);for(const m of show.filter(m=>m.group==='Keepouts'&&!m.name.startsWith('Prop_visual'))){bind(m.buffer);gl.drawArrays(gl.TRIANGLES,0,m.count)}gl.depthMask(true)}
+status.textContent='WebGL depth rendering · '+physical.length+' parts shown · all data embedded, works offline';}
+canvas.onpointerdown=e=>{down=[e.clientX,e.clientY];canvas.setPointerCapture(e.pointerId)};canvas.onpointerup=()=>down=null;canvas.onpointermove=e=>{if(!down)return;yaw+=(e.clientX-down[0])*.008;pitch=Math.max(-1.55,Math.min(1.57,pitch+(e.clientY-down[1])*.008));down=[e.clientX,e.clientY];draw()};canvas.onwheel=e=>{e.preventDefault();zoom=Math.max(.4,Math.min(3,zoom*Math.exp(-e.deltaY*.001)));draw()};
+for(const id of ['cut','keep','wire'])document.getElementById(id).onchange=draw;
+document.getElementById('iso').onclick=()=>{yaw=.55;pitch=.92;zoom=1;draw()};
+document.getElementById('top').onclick=()=>{yaw=0;pitch=0;zoom=1;draw()};
+document.getElementById('side').onclick=()=>{yaw=0;pitch=Math.PI/2;zoom=1;draw()};
+document.getElementById('front').onclick=()=>{yaw=Math.PI/2;pitch=Math.PI/2;zoom=1;draw()};
+window.onresize=draw;draw();
+}
+</script></html>

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local toolchains and caches (not part of the repository)
+tools/
+tmp/
+output/
+pip-cache/
+
+# CAD backups and build intermediates
+*.FCBak
+*.elf
+
+# Packaging output
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,18 @@
+{
+  "errors": [],
+  "checks": {
+    "webgl": true,
+    "status": "WebGL depth rendering · 53 parts shown · all data embedded, works offline",
+    "canvasWidth": 1130,
+    "links": [
+      "docs/engineering_report.pdf",
+      "docs/assembly_dimensions.pdf",
+      "cad/SR71_600_P0.FCStd",
+      "cad/SR71_600_P0.step",
+      "docs/cutting_templates_1to1.pdf",
+      "data/procurement_budget.md"
+    ]
+  },
+  "missingLinks": [],
+  "passed": true
+}

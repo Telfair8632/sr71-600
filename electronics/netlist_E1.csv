@@ -1,0 +1,19 @@
+net name,end points,wire/component,notes
+BATT+,XT30+|ESC-L power+|ESC-R power+|UBEC-IN+,18-22AWG soldered star point,propulsion current must not enter the perfboard
+BATT-,XT30-|ESC-L power-|ESC-R power-|UBEC-IN-,18-22AWG soldered star point,propulsion negative and control ground join at the battery distribution point
+5V_STAR,UBEC-OUT+|C1+|C2+|servo L+|servo R+|J_LOGIC+,24-28AWG branches,the UBEC is the only 5 V source
+GND,UBEC-OUT-|C1-|C2-|Pico GND|RP1 GND|MPU6050 GND|U1-7|U2 GND|all signal grounds,continuous GND bus,all signals must share a common ground
+5V_LOGIC,J_LOGIC+|Pico VSYS|RP1 VCC|U1-14|R11 upper end,26-28AWG,place C2 470uF and C3 0.1uF at the perfboard entry
+3V3,Pico 3V3OUT|MPU6050 VCC|U2 VCC|I2C pull-up upper end,short leads,never connect any 5 V device here
+CRSF_TX_RX,RP1 TX|U2 A,U2 input tolerates 5.5V,receiver control data into the Pico
+UART0_RX,U2 Y|Pico GP1,short lead,U2 output is 3.3V
+UART0_TX,Pico GP0|R1 1k|RP1 RX,short lead,CRSF telemetry back to the receiver
+IMU_SDA,Pico GP4|MPU6050 SDA|optional R17 4.7k to 3V3,short lead,I2C pull-ups may only go to 3V3
+IMU_SCL,Pico GP5|MPU6050 SCL|optional R18 4.7k to 3V3,short lead,I2C pull-ups may only go to 3V3
+IMU_INT,MPU6050 INT|Pico GP3,short lead,data-ready interrupt
+ARM_GATE,Pico GP2|R2 4.7k|Q1 base|R12 10k to GND,short lead,high level enables outputs
+OE_N,Q1 collector|U1-1|U1-4|U1-10|U1-13|R11 10k to 5V_LOGIC,short lead,active-low enable
+PWM_SERVO_L,Pico GP6|U1-2|U1-3|R3 220|servo L signal|R7 10k to GND,signal paired with GND,start at 50Hz
+PWM_SERVO_R,Pico GP7|U1-5|U1-6|R4 220|servo R signal|R8 10k to GND,signal paired with GND,start at 50Hz
+PWM_ESC_L,Pico GP8|U1-9|U1-8|R5 220|ESC-L signal|R9 10k to GND,signal paired with GND,standard PWM 1000-2000us
+PWM_ESC_R,Pico GP9|U1-12|U1-11|R6 220|ESC-R signal|R10 10k to GND,signal paired with GND,standard PWM 1000-2000us

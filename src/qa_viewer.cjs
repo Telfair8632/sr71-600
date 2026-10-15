@@ -1,0 +1,22 @@
+const {chromium}=require('C:/Users/Telfair/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {pathToFileURL}=require('url');
+const path=require('path'),fs=require('fs');
+const root=path.resolve(__dirname,'..');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge',args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+ const page=await browser.newPage({viewport:{width:1440,height:950},deviceScaleFactor:1});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(pathToFileURL(path.join(root,'model_preview.html')).href);
+ await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('WebGL depth rendering'));
+ await page.screenshot({path:path.join(root,'qa','viewer_overview.png')});
+ await page.locator('#cut').check();await page.locator('#keep').check();
+ await page.screenshot({path:path.join(root,'qa','viewer_cutaway.png')});
+ for(const id of ['top','side','front','iso'])await page.locator('#'+id).click();
+ await page.locator('#wire').check();
+ const checks=await page.evaluate(()=>({webgl:!!document.querySelector('canvas').getContext('webgl'),status:document.querySelector('#status').textContent,canvasWidth:document.querySelector('canvas').width,links:Array.from(document.querySelectorAll('a')).map(a=>a.getAttribute('href'))}));
+ const missingLinks=checks.links.filter(p=>!fs.existsSync(path.join(root,p)));
+ fs.writeFileSync(path.join(root,'qa','viewer_checks.json'),JSON.stringify({errors,checks,missingLinks,passed:errors.length===0&&missingLinks.length===0},null,2));
+ await browser.close();
+ if(errors.length||missingLinks.length)process.exit(1);
+ console.log('Viewer: WebGL compiled, views and toggles worked, links checked');
+})();

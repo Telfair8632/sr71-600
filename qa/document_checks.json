@@ -1,0 +1,511 @@
+{
+  "pdf_pages": [
+    {
+      "pdf": "assembly_dimensions.pdf",
+      "page": 1,
+      "characters": 584,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_dimensions.pdf",
+      "page": 2,
+      "characters": 642,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_dimensions.pdf",
+      "page": 3,
+      "characters": 495,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_dimensions.pdf",
+      "page": 4,
+      "characters": 1022,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 1,
+      "characters": 657,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 2,
+      "characters": 1465,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 3,
+      "characters": 2067,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 4,
+      "characters": 1472,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 5,
+      "characters": 3527,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 6,
+      "characters": 364,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "assembly_instructions.pdf",
+      "page": 7,
+      "characters": 1465,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "circuit_design_E1.pdf",
+      "page": 1,
+      "characters": 1507,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "circuit_design_E1.pdf",
+      "page": 2,
+      "characters": 1789,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "circuit_design_E1.pdf",
+      "page": 3,
+      "characters": 1538,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "circuit_design_E1.pdf",
+      "page": 4,
+      "characters": 1887,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 1,
+      "characters": 243,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 2,
+      "characters": 244,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 3,
+      "characters": 248,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 4,
+      "characters": 250,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 5,
+      "characters": 250,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 6,
+      "characters": 250,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 7,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 8,
+      "characters": 248,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 9,
+      "characters": 248,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 10,
+      "characters": 249,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 11,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 12,
+      "characters": 247,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 13,
+      "characters": 247,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 14,
+      "characters": 245,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 15,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 16,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 17,
+      "characters": 245,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 18,
+      "characters": 247,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 19,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 20,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 21,
+      "characters": 239,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 22,
+      "characters": 244,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 23,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 24,
+      "characters": 247,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 25,
+      "characters": 246,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 26,
+      "characters": 241,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 27,
+      "characters": 249,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "cutting_templates_1to1.pdf",
+      "page": 28,
+      "characters": 255,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 1,
+      "characters": 1674,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 2,
+      "characters": 2495,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 3,
+      "characters": 2395,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 4,
+      "characters": 2782,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 5,
+      "characters": 2714,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 6,
+      "characters": 2474,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 7,
+      "characters": 2592,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 8,
+      "characters": 2981,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 9,
+      "characters": 2080,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "engineering_report.pdf",
+      "page": 10,
+      "characters": 1716,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 1,
+      "characters": 1822,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 2,
+      "characters": 1319,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 3,
+      "characters": 2531,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 4,
+      "characters": 2835,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 5,
+      "characters": 169,
+      "text_outside_page": [],
+      "rendered": true
+    },
+    {
+      "pdf": "procurement_list.pdf",
+      "page": 6,
+      "characters": 2281,
+      "text_outside_page": [],
+      "rendered": true
+    }
+  ],
+  "dxf_checks": [
+    {
+      "file": "F01_Wing_chine_NET.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 3
+    },
+    {
+      "file": "F02_Elevon_L.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F02_Elevon_R.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F03_Fuselage_side.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F04_Roof_frame.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 3
+    },
+    {
+      "file": "F05_Avionics_hatch.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F05_Battery_hatch.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F06_Nacelle_wrap.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F07_Vertical_fin.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F08_Belly_skid.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "F09_Spike_web.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 1
+    },
+    {
+      "file": "W01_Battery_tray.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 13
+    },
+    {
+      "file": "W02_Bulkhead.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 2
+    },
+    {
+      "file": "W03_Motor_firewall.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 2
+    },
+    {
+      "file": "W04_Nacelle_former_BLANK.dxf",
+      "units_mm": true,
+      "errors": 0,
+      "cut_entities": 2
+    }
+  ],
+  "all_technical_checks_pass": true,
+  "visual_review": "PENDING_MODEL_INSPECTION"
+}
