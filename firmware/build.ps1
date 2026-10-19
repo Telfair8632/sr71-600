@@ -2,18 +2,19 @@
 # Usage (from anywhere):
 #   powershell -ExecutionPolicy Bypass -File build.ps1 level3_minimal
 #   powershell -ExecutionPolicy Bypass -File build.ps1 level4_imu
+#   powershell -ExecutionPolicy Bypass -File build.ps1 level6_pwm
 #
 # NOTE: the workspace path contains non-ASCII chars (D:\...), which the ARM
 # binutils cannot handle. Toolchain and build dirs therefore live under the
 # pure-ASCII path D:\pico-tools; .uf2/.elf are copied back here after build.
-param([Parameter(Mandatory = $true)][ValidateSet("level3_minimal", "level4_imu", "bus_doctor")][string]$Target)
+param([Parameter(Mandatory = $true)][ValidateSet("level3_minimal", "level4_imu", "level6_pwm", "bus_doctor")][string]$Target)
 
 $ErrorActionPreference = "Stop"
 $PicoTools = "D:\pico-tools"
 $Src = Join-Path $PSScriptRoot $Target
 $Build = Join-Path $PicoTools "build\$Target"
 
-$Names = @{ level3_minimal = "sr71fc_level3"; level4_imu = "sr71fc_level4"; bus_doctor = "sr71bus" }
+$Names = @{ level3_minimal = "sr71fc_level3"; level4_imu = "sr71fc_level4"; level6_pwm = "sr71fc_level6"; bus_doctor = "sr71bus" }
 $Name = $Names[$Target]
 
 New-Item -ItemType Directory -Force -Path $Build | Out-Null

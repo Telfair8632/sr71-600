@@ -15,13 +15,15 @@ Prices are budget allowances except where marked verified. The already-arrived l
 
 **LCSC order** (search the part number to land directly on it; verified in stock):
 
-- [ ] SN74LVC1G17 SOT-23-5 ×10 (part no. C22469943, about CNY 3 for 10) — U2 receiver buffer
-- [ ] 2N3904BU TO-92 ×5 (part no. C124482, about CNY 1) — Q1 hardware enable
+- [x] SN74LVC1G17 SOT-23-5 ×10 (part no. C22469943, about CNY 3 for 10) — U2 receiver buffer — **arrived 2026-10-20**
+- [x] 2N3904BU TO-92 ×5 (part no. C124482, about CNY 1) — Q1 hardware enable — **arrived 2026-10-20**
 
 **Taobao order**:
 
 - [x] SOT23-5-to-DIP adapter boards (double-sided: SOT23-6 front / SOT23-5 back) — **purchased 2026-10-08**
 - [x] 1/4W metal-film resistor assortment — **ordered 2026-10-08** (through-hole, includes 220Ω/1k/4.7k/10k)
+- [x] **DIP14 IC sockets ×3 (added 2026-10-15)** — **purchased 2026-10-19** (Taobao, narrow-body 300 mil/7.62 mm, pack of 34, specs verified before ordering); **blocks closing out milestone B**
+- [ ] 2.54mm pin headers, assorted (added 2026-10-15) — about CNY 5, for the four output-header groups at the board edge; skippable if the Pico headers leave spares
 - [ ] AMASS XT30UPB male-female pairs ×2 (one pair reserved for battery re-termination) — about CNY 12
 - [x] Silicone wire (tinned copper) — **purchased 2026-10-08**
 - [x] Heat-shrink tubing assortment — **purchased 2026-10-08**

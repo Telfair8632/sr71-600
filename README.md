@@ -16,7 +16,8 @@ A fully independent engineering project: the complete digital build package, fir
 | Circuit design (E1) | Done | `docs/circuit_design.md`, `electronics/` |
 | Firmware level 3 — minimal firmware, 30-min soak + watchdog | **PASS** (2026-10-07) | `data/test_records.csv` row PICO0, `firmware/scripts/soak_level3_*.log` |
 | Firmware level 4 — MPU-6050 IMU @ 200 Hz, 10-min log | **PASS** (2026-10-13, 1 known issue) | `data/test_records.csv` row IMU0, `firmware/scripts/imu_10min.csv` |
-| Physical build & flight test | Not started (parts arriving) | `ROADMAP.md` |
+| Firmware level 6 — four-channel 50 Hz PWM | Compiled (2026-10-19), verification pending | `firmware/level6_pwm/`, `docs/debug_log_2026-10-19.md` |
+| Physical build & flight test | In progress — control-board soldering started (milestone B: 5 V/GND buses + capacitors soldered, photo review pending) | `docs/debug_log_2026-10-19.md`, `ROADMAP.md` |
 
 ## Repository Layout
 
@@ -28,8 +29,8 @@ print/              8 3D-printed parts (motor saddles, fin saddles, control horn
 docs/               engineering report, assembly instructions, circuit design,
                     staged debug procedure, debug logs, assessments, learning path
 electronics/        wiring diagram (SVG) and netlist (CSV), revision E1
-firmware/           Pico 2 (RP2350) firmware: level3_minimal, level4_imu, bus_doctor,
-                    plus the automated acceptance scripts and raw test logs
+firmware/           Pico 2 (RP2350) firmware: level3_minimal, level4_imu, level6_pwm,
+                    bus_doctor, plus the automated acceptance scripts and raw test logs
 data/               BOM, procurement budget, test records, measurement records,
                     analysis outputs (JSON) consumed by the generators
 src/                Python generators that build the CAD, drawings, PDFs, DXFs,
@@ -47,7 +48,7 @@ Start here:
 - Read `docs/engineering_report.md` — design, calculations, assembly, wiring, testing, and budget.
 - `docs/assembly_dimensions.pdf` and `docs/cutting_templates_1to1.pdf` — dimensioned drawings and 1:1 print templates.
 - `docs/debug_procedure.md` — the 14-level staged verification program.
-- `docs/debug_log_2026-10-13.md` — the level-4 troubleshooting retrospective.
+- `docs/debug_log_2026-10-13.md` and `docs/debug_log_2026-10-19.md` — the level-4 troubleshooting retrospective and the board bring-up log.
 
 ## Design Baseline
 

@@ -2,9 +2,10 @@
 
 Level-by-level bring-up corresponding to `docs/debug_procedure.md`. Each level is a standalone project, flashed and verified one level at a time.
 
-**Two pre-built firmwares are included** (ready to flash as-is):
+**Three pre-built firmwares are included** (ready to flash as-is):
 - `level3_minimal/sr71fc_level3.uf2` — bring-up level 3: minimal firmware
 - `level4_imu/sr71fc_level4.uf2` — bring-up level 4: MPU-6050 readout
+- `level6_pwm/sr71fc_level6.uf2` — bring-up level 6: four-channel 50 Hz PWM output waveforms
 
 ## Rebuilding
 
@@ -16,6 +17,7 @@ To rebuild after editing the sources (PowerShell):
 ```powershell
 powershell -ExecutionPolicy Bypass -File build.ps1 level3_minimal
 powershell -ExecutionPolicy Bypass -File build.ps1 level4_imu
+powershell -ExecutionPolicy Bypass -File build.ps1 level6_pwm
 ```
 
 The script syncs the sources into `D:\pico-tools\build\` for compilation (a pure-ASCII path), then copies the resulting `.uf2/.elf` back into the level directory.
@@ -77,3 +79,23 @@ Direct Dupont jumper-wire connections (**no soldering, no battery**):
 pip install pyserial
 python scripts/imu_capture.py --port COM5 --seconds 600 --out imu_10min.csv
 ```
+
+## Level 6: Four-Channel 50 Hz PWM (level6_pwm)
+
+**Do not connect servos or ESCs.** First verify with a logic analyzer directly on the Pico pins (after the buffer board is soldered, repeat the measurement on the AHCT125 output side — that is the formal acceptance of debug-procedure §6). USB power alone is sufficient.
+
+Logic-analyzer hookup:
+
+| Logic analyzer | Pico 2 |
+|---|---|
+| CH0 / CH1 / CH2 / CH3 | GP6 / GP7 / GP8 / GP9 |
+| CH4 | GP2 (OE gate) |
+| GND | GND |
+
+- [ ] After power-up, the four channels **stay low for the ~0.5 s self-test window**, then the 50 Hz waveforms appear
+- [ ] GP6/GP7 pulse width ≈1500 µs (servo center), GP8/GP9 ≈1000 µs (minimum throttle)
+- [ ] Period steady at 20.000 ms (hardware PWM — there should be no jitter)
+- [ ] Send `s` over serial: each channel in turn carries a signature pulse width for 2 s (1250/1750/1100/1150 µs) — confirm the moving channel is the intended one, **verifying no channel crosstalk**
+- [ ] Send `e`/`d` over serial: CH4 (GP2) goes high/low; GP2 defaults low at power-up
+- [ ] Send `w` over serial: triggers a watchdog reset — on the logic analyzer the waveforms must disappear, the pins stay low, and there are no pulses at all for 0.5 s after the reboot; serial shows `reset cause: WATCHDOG`
+- [ ] Record results in `data/test_records.csv` (row PWM0, Pico pin-side pre-verification; fill in the formal result after repeating the measurement on the AHCT125 output side)
