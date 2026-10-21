@@ -1,0 +1,24 @@
+Qty,Refs,MPN,Category,Footprint,Vendor_Status,Vendor_Stock,Vendor_Url,Datasheet
+1,J1,C19268029,connector,components:CONN-TH_XT30PB-M,,,,C19268029.pdf
+1,J2,ESC-L_PWR,connector,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,,,
+1,J3,ESC-R_PWR,connector,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,,,
+1,J4,UBEC_IN,connector,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,,,
+1,J5,UBEC_OUT,connector,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,,,
+2,C1 C2,470uF,generic,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,,,,
+4,C3 C5 C6 C7,100nF,generic,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm,,,,
+1,J12,PICO_L,connector,Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical,,,,
+1,J13,PICO_R,connector,Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical,,,,
+1,U2,SN74LVC1G17DB,ic,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,active,220,https://www.lcsc.com/product-detail/C22469943.html,SN74LVC1G17DB.pdf
+1,R1,1k,generic,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,,,
+1,J11,IMU,connector,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,,,,
+1,C4,10uF,generic,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,,,,
+1,R2,4k7,generic,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,,,
+1,U1,SN74AHCT125N,ic,components:PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL,active,1105,https://www.lcsc.com/product-detail/C354152.html,SN74AHCT125N.pdf
+1,Q1,2N3904BU,ic,Package_TO_SOT_THT:TO-92_Inline,active,44155,https://www.lcsc.com/product-detail/C124482.html,2N3904BU.pdf
+10,R10 R11 R12 R13 R14 R15 R16 R7 R8 R9,10k,generic,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,,,
+4,R3 R4 R5 R6,220R,generic,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,,,
+1,J6,S-L,connector,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,,,
+1,J7,S-R,connector,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,,,
+1,J8,ESC-L,connector,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,,,
+1,J9,ESC-R,connector,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,,,
+1,J10,RP1,connector,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,,,,

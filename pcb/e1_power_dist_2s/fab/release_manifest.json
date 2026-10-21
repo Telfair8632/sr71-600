@@ -1,0 +1,26 @@
+{
+  "release_id": "rel_20261021_000347",
+  "project": "e1_power_dist_2s",
+  "generated_at_jst": "2026-10-21T00:03:49.769292+09:00",
+  "generated_at_utc": "2026-10-20T15:03:49.769292+00:00",
+  "upstream": {
+    "bom_readiness_verified_at": "2026-10-20T14:56:20.669188Z",
+    "bom_readiness_summary": {
+      "total": 41,
+      "pass": 41,
+      "fail": 0,
+      "real_mpn_count": 4
+    }
+  },
+  "coverage": {
+    "n_unique_mpn": 4,
+    "single_vendor_coverage": {
+      "digikey_jp": "0/4",
+      "mouser_jp": "0/4",
+      "lcsc": "4/4"
+    },
+    "recommended_paths": [
+      "lcsc"
+    ]
+  }
+}

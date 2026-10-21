@@ -1,6 +1,6 @@
 # Project Roadmap
 
-Single source of truth for the build plan, current status, and the gates between phases. Status date: **2026-10-20**.
+Single source of truth for the build plan, current status, and the gates between phases. Status date: **2026-10-21**.
 
 ## 1. Phase Plan
 
@@ -19,6 +19,7 @@ Single source of truth for the build plan, current status, and the gates between
 | D11 | 1400 mm version 2 | DEFERRED | Separate budget and design after the small version passes |
 | F01 | Pico firmware debug levels 3–4 | **DONE** | Level 3 PASS 2026-10-07 (30-min soak, watchdog); level 4 PASS 2026-10-13 (MPU-6050 @ 200 Hz, 10-min log). Ladder continues as RX0/PWM0/... rows in `data/test_records.csv` |
 | F02 | Pico firmware debug level 6 (four-channel PWM) | FIRMWARE COMPILED | Compiled 2026-10-19 (`firmware/level6_pwm/`), flash + logic-analyzer verification on the Pico pin side still pending — see `docs/debug_log_2026-10-19.md` |
+| P01 | E1 power-distribution PCB (v2 board) | **ORDERED** | Designed and verified 2026-10-20/21 (ERC 0, 27/27 net match, DRC 0/0, dual release review); ordered from JLC 2026-10-21 (5 boards, ~CNY 150–250, ETA 5–7 days) — see `pcb/e1_power_dist_2s/` and `docs/log_2026-10-21_e1_pcb.md` |
 
 ## 2. Firmware Verification Ladder
 
@@ -43,13 +44,13 @@ The staged program is defined in `docs/debug_procedure.md` — no level starts u
 
 ## 3. Immediate Next Actions
 
-Board bring-up (milestone B) and firmware verification are running in parallel while waiting for the remaining deliveries:
+Board bring-up (milestone B), firmware verification, and PCB assembly prep are running in parallel while waiting for deliveries:
 
-1. **Board photo review**: GND bus + C2/C3 solder joints (focus: C2 electrolytic polarity — reversed polarity under power will burst it). Once passed, solder the resistors, pin headers, and C6 (the U1 socket footprints are already pencil-marked).
-2. **Level-6 firmware**: flash `sr71fc_level6.uf2` and run the logic-analyzer pre-verification on the Pico pin side (checklist in `firmware/README.md`).
-3. **When the DIP14 sockets arrive**: solder the sockets → insert the AHCT125 → multimeter recheck (no 5 V–GND short, OE_N ≈ 5 V, all four Y outputs ≈ 0 V) → close out milestone B; solder Q1 with the arrived LCSC parts (2N3904BU + SN74LVC1G17, in hand since 2026-10-20).
-4. **Battery**: smell re-check + first-charge health inspection once the replacement charger arrives (no-charging rule stands until then).
-5. Measure the delivered hardware (motor hole patterns, screw lengths, propeller shaft fit) and adapt the affected drawings; then the motor saddles, structural specimens, and thrust bench.
+1. **When the PCB arrives (≈5–7 days from 2026-10-21)**: work through the per-refdes assembly checklist; multimeter check that BATT+/− is isolated from 5V/GND before populating; solder order resistors → small capacitors → electrolytic → DIP-14 socket → Pico headers → pin headers → XT30/terminals; leave R17/R18 unpopulated.
+2. **Perfboard photo review**: GND bus + C2/C3 solder joints (focus: C2 electrolytic polarity — reversed polarity under power will burst it). Once passed, solder the resistors, pin headers, C6, and the DIP-14 sockets → insert the AHCT125 → multimeter recheck (no 5 V–GND short, OE_N ≈ 5 V, all four Y ≈ 0 V) → close out milestone B; solder Q1 with the arrived LCSC parts.
+3. **Level-6 firmware**: flash `sr71fc_level6.uf2` and run the logic-analyzer pre-verification on the Pico pin side (checklist in `firmware/README.md`) — needs no radio.
+4. **Radio system**: order the RadioMaster Pocket (**ELRS version, not multi-protocol**) + RP1 V2 (~CNY 450). When the receiver arrives: level 7 (CRSF link); macro-photo U2's pin-1 marking before soldering it anywhere.
+5. **Battery**: smell re-check + first-charge health inspection once the replacement charger arrives; measure the delivered hardware (motor hole patterns, screw lengths, propeller shaft fit) and adapt the affected drawings.
 
 ## 4. Known Issues Register
 
@@ -58,6 +59,7 @@ Board bring-up (milestone B) and firmware verification are running in parallel w
 | KI-1 | MPU-6050 accelerometer reads ~20% low (static \|a\| = 0.79–0.87 g vs expected 1.0 g); clone chip or residual effect of the earlier reverse-power incident | None on pitch/roll (ratio-based); gyro unaffected | Add a 1/0.80 scale correction in firmware before installation, or replace with a genuine GY-521 module |
 | KI-2 | Dimensioned hole positions are nominal, not measured | CAD-to-part fit risk | Resolve in D02/D05 before final assembly |
 | KI-3 | C3 measures ~49 nF vs 100 nF nominal (measured 2026-10-20); C2 not yet measured individually | None — adequate as decoupling, retained | Re-measure C2 across the two buses on the 2000 µF range (expected 400–550 µF) at the next board session |
+| KI-4 (resolved) | Hardware check-in guide §5.4 listed the U2 (SN74LVC1G17) pin order shifted by one pin | None — U2 not yet soldered | Corrected 2026-10-21 in both the English guide and the Chinese original: 1=NC, 2=A, 3=GND, 4=Y, 5=VCC; verify against the datasheet before soldering |
 
 ## 5. Version 2 (1400 mm) Gate
 

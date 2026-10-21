@@ -1,0 +1,7 @@
+{
+  "thickness_mm": "1.6",
+  "layers": "2",
+  "copper_oz": "2",
+  "surface_finish": "HASL (leaded) or lead-free HASL",
+  "note": "2 oz, double-sided, all through-hole, hand-soldered; select 2 oz copper when ordering at JLCPCB"
+}

@@ -1,0 +1,121 @@
+{
+  "_note": "Machine-generated provenance record kept verbatim from the release run. CLI stdout strings are from a zh-CN KiCad locale ('Plotted to...' / 'Created file...' / 'Done.' / 'BOM written to...'). Absolute paths reference the original build machine (D:\\pcb-agent-teams\\...).",
+  "ok": true,
+  "pcb": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb",
+  "schematic": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_sch",
+  "kicad_cli": "F:/KiCad/bin/kicad-cli.exe",
+  "output_dir": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab",
+  "gerber_dir": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers",
+  "assembly_dir": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly",
+  "layers": [
+    "F.Cu",
+    "B.Cu",
+    "F.Paste",
+    "B.Paste",
+    "F.Silkscreen",
+    "B.Silkscreen",
+    "F.Mask",
+    "B.Mask",
+    "Edge.Cuts"
+  ],
+  "positions_csv": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_positions.csv",
+  "assembly_bom_csv": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_assembly_bom.csv",
+  "commands": {
+    "gerbers": {
+      "cmd": [
+        "F:/KiCad/bin/kicad-cli.exe",
+        "pcb",
+        "export",
+        "gerbers",
+        "--output",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers",
+        "--layers",
+        "F.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+        "--subtract-soldermask",
+        "--check-zones",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb"
+      ],
+      "returncode": 0,
+      "stdout": "绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Cu.gtl'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Cu.gbl'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Paste.gtp'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Paste.gbp'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Silkscreen.gto'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Silkscreen.gbo'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Mask.gts'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Mask.gbs'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-Edge_Cuts.gm1'。",
+      "stderr": ""
+    },
+    "drill": {
+      "cmd": [
+        "F:/KiCad/bin/kicad-cli.exe",
+        "pcb",
+        "export",
+        "drill",
+        "--output",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers",
+        "--format",
+        "excellon",
+        "--excellon-units",
+        "mm",
+        "--generate-map",
+        "--map-format",
+        "gerberx2",
+        "--generate-report",
+        "--report-path",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-drill_report.txt",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb"
+      ],
+      "returncode": 0,
+      "stdout": "已创建文件 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s.drl'\n创建文件 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-drl_map.gbr'。\n完成。",
+      "stderr": ""
+    },
+    "positions": {
+      "cmd": [
+        "F:/KiCad/bin/kicad-cli.exe",
+        "pcb",
+        "export",
+        "pos",
+        "--output",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_positions.csv",
+        "--side",
+        "both",
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--exclude-dnp",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote position data to 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_positions.csv'.",
+      "stderr": ""
+    },
+    "positions_jlc": {
+      "ok": true,
+      "file": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_jlc_cpl.csv"
+    },
+    "bom": {
+      "cmd": [
+        "F:/KiCad/bin/kicad-cli.exe",
+        "sch",
+        "export",
+        "bom",
+        "--output",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\assembly\\e1_power_dist_2s_assembly_bom.csv",
+        "--fields",
+        "Reference,Value,Footprint,QUANTITY,DNP,MPN,LCSC Part #",
+        "--labels",
+        "Refs,Value,Footprint,Qty,DNP,MPN,LCSC Part #",
+        "--group-by",
+        "Value,Footprint,MPN,LCSC Part #",
+        "--exclude-dnp",
+        "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_sch"
+      ],
+      "returncode": 0,
+      "stdout": "写入物料清单到 'D:/pcb-agent-teams/Projects/e1_power_dist_2s/release/20261021_000347/pcb_fab/assembly/e1_power_dist_2s_assembly_bom.csv'。",
+      "stderr": ""
+    },
+    "bom_dnp_synced": {
+      "ok": true,
+      "dropped": [
+        "R17",
+        "R18"
+      ]
+    }
+  },
+  "zip": "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\e1_power_dist_2s_fab.zip"
+}

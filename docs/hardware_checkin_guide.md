@@ -109,7 +109,7 @@ Principles (matching `circuit_design.md` §5): one continuous thick tinned-coppe
 | C collector | OE_N |
 | B base | R2 4.7k ← Pico GP2; R12 10k → GND |
 
-### 5.4 U2 = SN74LVC1G17 (SOT-23-5: 1=A, 2=GND, 3=Y, 4=NC, 5=VCC; datasheet rules)
+### 5.4 U2 = SN74LVC1G17 (SOT-23-5: 1=NC, 2=A, 3=GND, 4=Y, 5=VCC; corrected 2026-10-21 per datasheet — the earlier guide issue listed the pins shifted by one)
 
 | Pin | Connects to |
 |---|---|

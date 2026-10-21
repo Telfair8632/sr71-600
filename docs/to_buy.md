@@ -34,7 +34,7 @@ Prices are budget allowances except where marked verified. The already-arrived l
 ## Order 3: Radio System (ELRS 2.4G — the two items must share the same protocol)
 
 - [ ] RadioMaster RP1 V2 receiver ×1 — budget CNY 150
-- [ ] RadioMaster Pocket ELRS transmitter ×1 — budget CNY 650 (batteries not included)
+- [ ] RadioMaster Pocket ELRS transmitter ×1 — budget CNY 650 (batteries not included). **Must be the ELRS version, not the multi-protocol variant** (~CNY 365–420 street price)
 - [ ] 18650 cells ×2 (for the Pocket, USB-C direct charging) — about CNY 40
 
 ## Order 4: Powertrain (final batch)
@@ -42,6 +42,13 @@ Prices are budget allowances except where marked verified. The already-arrived l
 - [x] **AGFRC XR-30AL ESCs ×2** — **purchased 2026-10-08**; on arrival, accept per §0: no BEC/OPTO, actual weight ≤6g, size 26×13×4mm, both from the same batch
 - [ ] 2S balance charger ×1 — budget CNY 350 (any model covering 2S balance/storage modes will do; simple ones run as low as CNY 100–200). **ESCs already purchased — this item is now mandatory before powertrain testing**
 - [ ] 2-inch 2023-series CW/CCW propeller pair + spares — budget CNY 60 (fitted only at the bench stage)
+
+## PCB Assembly Batch (ordered 2026-10-21 alongside the board fab)
+
+- [x] XT30 vertical through-board connector (LCSC C19268029) — **in transit**, for the PCB's battery input
+- [x] 1×40P female header strips ×3 (LCSC C41432112) — **in transit**, for the Pico 2 sockets on the PCB
+- [x] 5.0mm screw-terminal blocks ×4 (~CNY 15, LCSC) — **in transit**, for ESC/UBEC entry
+- [ ] SN74AHCT125N spare ×1 (LCSC C354152, ~CNY 1) — **recommended**: only one chip on hand and U1 has no backup
 
 ## Airframe Materials (does not block ground debugging; combine with Order 2 to save shipping)
 

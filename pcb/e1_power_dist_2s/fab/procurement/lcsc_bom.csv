@@ -1,0 +1,24 @@
+Comment,Designator,Footprint,LCSC Part #,Manufacture Part Number,Quantity
+C19268029,J1,components:CONN-TH_XT30PB-M,,C19268029,1
+ESC-L_PWR,J2,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,ESC-L_PWR,1
+ESC-R_PWR,J3,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,ESC-R_PWR,1
+UBEC_IN,J4,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,UBEC_IN,1
+UBEC_OUT,J5,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,,UBEC_OUT,1
+470uF,C1 C2,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,,470uF,2
+100nF,C3 C5 C6 C7,Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm,,100nF,4
+PICO_L,J12,Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical,,PICO_L,1
+PICO_R,J13,Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical,,PICO_R,1
+SN74LVC1G17DB,U2,Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical,,SN74LVC1G17DB,1
+1k,R1,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,1k,1
+IMU,J11,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,,IMU,1
+10uF,C4,Capacitor_THT:CP_Radial_D5.0mm_P2.50mm,,10uF,1
+4k7,R2,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,4k7,1
+SN74AHCT125N,U1,components:PDIP-14_L19.3-W6.4-P2.54-LS7.6-BL,,SN74AHCT125N,1
+2N3904BU,Q1,Package_TO_SOT_THT:TO-92_Inline,,2N3904BU,1
+10k,R10 R11 R12 R13 R14 R15 R16 R7 R8 R9,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,10k,10
+220R,R3 R4 R5 R6,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,,220R,4
+S-L,J6,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,S-L,1
+S-R,J7,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,,S-R,1
+ESC-L,J8,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,ESC-L,1
+ESC-R,J9,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,,ESC-R,1
+RP1,J10,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,,RP1,1
