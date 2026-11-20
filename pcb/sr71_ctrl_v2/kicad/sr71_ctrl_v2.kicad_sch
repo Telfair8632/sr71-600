@@ -1275,7 +1275,7 @@
 					) hide
 				)
 			)
-			(property "Manufacturer" "LX(灵星芯微)"
+			(property "Manufacturer" "LX"
 				(id 4)
 				(at 0 -15.24 0)
 				(effects
@@ -1850,7 +1850,7 @@
 					) hide
 				)
 			)
-			(property "Manufacturer" "TI(德州仪器)"
+			(property "Manufacturer" "TI"
 				(id 4)
 				(at 0 -20.32 0)
 				(effects
@@ -2202,7 +2202,7 @@
 					) hide
 				)
 			)
-			(property "Manufacturer" "onsemi(安森美)"
+			(property "Manufacturer" "onsemi"
 				(id 4)
 				(at 0 -17.78 0)
 				(effects
@@ -3743,7 +3743,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "LC/克隆"
+		(property "Manufacturer" "LC/clone"
 			(at 91.44 33.0199 0)
 			(effects
 				(font
@@ -4641,7 +4641,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "LC/克隆"
+		(property "Manufacturer" "LC/clone"
 			(at 177.8 40.6399 0)
 			(effects
 				(font

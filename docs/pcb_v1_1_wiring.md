@@ -1,6 +1,6 @@
 # SR71-600 Control Board V1.1 — Wiring and Bring-Up Reference
 
-Date: 2026-11-19. Board silkscreen: `SR71-600 主控板 V1.1 261821`, received bare (no parts fitted).
+Date: 2026-11-19. Board silkscreen: `SR71-600 main control board V1.1 261821` (English rendering of the Chinese label), received bare (no parts fitted).
 Design source: `D:\pcb-agent-teams\Projects\e1_power_dist_2s` (KiCad + fab release `20261021_000347`).
 This note supersedes the perfboard sections of `hardware_checkin_guide.md`; the electrical netlist is unchanged from E1.
 

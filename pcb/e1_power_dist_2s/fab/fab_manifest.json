@@ -36,7 +36,7 @@
         "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb"
       ],
       "returncode": 0,
-      "stdout": "绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Cu.gtl'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Cu.gbl'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Paste.gtp'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Paste.gbp'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Silkscreen.gto'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Silkscreen.gbo'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-F_Mask.gts'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-B_Mask.gbs'。\n绘制到 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-Edge_Cuts.gm1'。",
+      "stdout": "Plotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.\nPlotted to '\1'.",
       "stderr": ""
     },
     "drill": {
@@ -60,7 +60,7 @@
         "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_pcb"
       ],
       "returncode": 0,
-      "stdout": "已创建文件 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s.drl'\n创建文件 'D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\release\\20261021_000347\\pcb_fab\\gerbers\\e1_power_dist_2s-drl_map.gbr'。\n完成。",
+      "stdout": "Created file '\1'\nCreated file '\1'.\nDone.",
       "stderr": ""
     },
     "positions": {
@@ -106,7 +106,7 @@
         "D:\\pcb-agent-teams\\Projects\\e1_power_dist_2s\\kicad\\e1_power_dist_2s\\e1_power_dist_2s.kicad_sch"
       ],
       "returncode": 0,
-      "stdout": "写入物料清单到 'D:/pcb-agent-teams/Projects/e1_power_dist_2s/release/20261021_000347/pcb_fab/assembly/e1_power_dist_2s_assembly_bom.csv'。",
+      "stdout": "Writing BOM to '\1'.",
       "stderr": ""
     },
     "bom_dnp_synced": {
