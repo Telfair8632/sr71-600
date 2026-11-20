@@ -70,3 +70,10 @@ Netlist highlights (unchanged): GP6–GP9 → U1 inputs (with 10 k pull-downs R1
 1. **LCSC part numbers** are not yet in the BOM (values and footprints only). Needed for JLC SMT upload.
 2. **CPL format**: the exported file uses KiCad coordinates (negative Y). JLC accepts the KiCad option in its uploader; alternatively the Y axis must be flipped and rotations normalised.
 3. Order confirmation and a final visual check of `renders/refs_map.png`.
+
+## 8. Revision history
+
+| Date | Change |
+|---|---|
+| 2026-11-19 | First routed version (65 × 85 mm); 25 nets routed, DRC 0/0 |
+| 2026-11-20 | **Board outline fix**: the four corner arcs had been drawn with the wrong sweep direction — each arc took the long way round instead of a quarter turn, so the corners were malformed. Corrected in the board file (arc start/end swapped); DRC re-run (0 violations, 0 unconnected); Gerbers, drill file, CPL and preview re-exported. No copper or placement change. |

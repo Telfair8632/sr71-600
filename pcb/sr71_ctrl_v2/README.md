@@ -2,6 +2,7 @@
 
 Board: 65 × 85 mm, 2 layers, 1.0 mm, 1 oz copper, 37 SMD parts + 4 × M2 mounting holes.
 Designed 2026-11-19; DRC clean (0 violations / 0 unconnected); **not yet ordered**.
+Revision 2026-11-20: the four board-outline corner arcs had the wrong sweep direction; fixed in the board file and the fabrication package re-exported.
 
 This board replaces the through-hole `pcb/e1_power_dist_2s/` board as the flight-intent control board. The battery / ESC / UBEC distribution moved off the board, so the board now starts at 5 V and can be assembled by a PCB house in one pass.
 
