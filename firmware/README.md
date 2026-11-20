@@ -73,6 +73,8 @@ Direct Dupont jumper-wire connections (**no soldering, no battery**):
 - [ ] Send `v` to start the 200 Hz data stream and record continuously for **10 minutes**: no freeze, no gap >15 ms (gap15=0), no FIFO overflow; send `v` again afterwards to stop the stream
 - [ ] Record results in the IMU0 row of `data/test_records.csv`
 
+**Status (measured 2026-10-13):** all of the above passed, IMU0 = PASS. The single open item was accelerometer scale: at rest `|a|` measured 0.79–0.87 g instead of 1.0 g (a uniform ~20 % low scale, typical of a clone chip). On 2026-11-19 the firmware was updated with a ×1.25 (= 1/0.80) scale correction and the UF2 rebuilt; the boot banner now prints `accel scale correction x1.250`. **After re-flashing, only `|a| ≈ 1.0 g` needs to be re-checked**; the other criteria do not need repeating. If the module is replaced with a genuine GY-521, set `ACCEL_SCALE_CORR` back to `1.0f`.
+
 10-minute capture command (run it in another window on the computer, or first confirm the connection with a serial terminal):
 
 ```powershell

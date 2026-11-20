@@ -1,38 +1,31 @@
 /*
- * SR71-600 bring-up level 4: MPU-6050 readout and verification
+ * SR71-600 调试第4级：MPU-6050 读取与验证
  *
- * Wiring (direct Dupont jumper wires, no soldering; docs/debug_procedure.md level 4):
- *   MPU6050 VCC -> Pico 3V3(OUT)      (pull-ups may only be tied to 3.3 V)
+ * 接线（杜邦线直连，无需焊接；docs/设备到齐后调试流程.md 第4级）：
+ *   MPU6050 VCC -> Pico 3V3(OUT)      （上拉只能接3.3V）
  *   MPU6050 GND -> Pico GND
  *   MPU6050 SDA -> GP4
  *   MPU6050 SCL -> GP5
  *   MPU6050 INT -> GP3
  *
- * Corresponding acceptance items:
- *   1. WHO_AM_I expected to read 0x68
- *   2. 200 Hz sampling, gyro ±1000 dps, accelerometer ±8g
- *   3. DATA_RDY interrupt records a microsecond timestamp and sets the
- *      new-data flag; the main loop reads all six axes
- *   4. Gyro bias computed over 10 s at rest (runs automatically at
- *      power-up; keep the airframe still during it)
- *   5. Record continuously for 10 minutes: mean sample interval about
- *      5 ms, no consecutive sample drops / freezes / FIFO overflows
- *   6. Nose up / nose down / left wing up / right wing up to verify the
- *      sign of each axis (manual interpretation)
- *   7. Flat and at rest: angular rates near 0, accelerometer magnitude
- *      near 1 g
+ * 对应验收项：
+ *   1. WHO_AM_I 期望 0x68
+ *   2. 200Hz 采样、陀螺 ±1000dps、加速度 ±8g
+ *   3. DATA_RDY 中断记录微秒时间戳并置新数据标志，主循环读取六轴
+ *   4. 静止10秒计算陀螺零偏（上电自动执行，期间保持机体静止）
+ *   5. 连续记录10分钟：平均采样间隔约5ms，无连续丢样/冻结/FIFO溢出
+ *   6. 抬机头/压机头/抬左翼/抬右翼核对三轴正负号（人工判读）
+ *   7. 静止放平：角速度接近0，加速度合量接近1g
+ *      （2026-11-19 起固件内含 ×1.25 加速度计刻度修正，见 ACCEL_SCALE_CORR）
  *
- * Serial commands (USB CDC, any baud rate):
- *   v = toggle the 200 Hz raw data stream (CSV lines 'D,...', for the
- *      10-minute recording)
- *   c = redo the 10 s gyro bias calibration
- *   s = print statistics immediately
- *   h = help
+ * 串口命令（USB CDC，任意波特率）：
+ *   v = 切换 200Hz 原始数据流（CSV 行 'D,...'，用于10分钟记录）
+ *   c = 重新执行10秒陀螺零偏校准
+ *   s = 立即打印一次统计
+ *   h = 帮助
  *
- * The 'S,...' summary line is printed every 500 ms and contains the
- * measured sample rate, maximum sample gap, count of gaps over 15 ms,
- * and the FIFO overflow count — the three pass conditions of acceptance
- * item 5.
+ * 统计行 'S,...' 每500ms打印一次，含实测采样率、最大采样空档、
+ * 超过15ms空档次数、FIFO溢出计数——对应验收项5的三个通过条件。
  */
 #include <stdio.h>
 #include <math.h>
@@ -44,14 +37,14 @@
 #include "hardware/watchdog.h"
 #include "hardware/timer.h"
 
-#define I2C_PORT      i2c0   /* GP4/GP5 belong to I2C0; using i2c1 would hang forever due to the pin mismatch */
+#define I2C_PORT      i2c0   /* GP4/GP5 属于 I2C0；用 i2c1 会因引脚不匹配永久挂起 */
 #define PIN_SDA       4u
 #define PIN_SCL       5u
 #define PIN_INT       3u
 #define MPU_ADDR      0x68u
 #define MPU_ADDR_ALT  0x69u
 
-/* MPU-6050 registers */
+/* MPU-6050 寄存器 */
 #define REG_SMPLRT_DIV   0x19u
 #define REG_CONFIG       0x1Au
 #define REG_GYRO_CONFIG  0x1Bu
@@ -66,20 +59,30 @@
 
 #define WHO_EXPECTED     0x68u
 
-/* Sample rate = 1 kHz / (1+SMPLRT_DIV) = 200 Hz (gyro outputs 1 kHz with the DLPF on) */
+/* 采样率 = 1kHz / (1+SMPLRT_DIV) = 200Hz（DLPF 开启时陀螺输出1kHz） */
 #define SMPLRT_DIV_VAL   4u
 #define CONFIG_VAL       0x03u   /* DLPF 44Hz */
 #define GYRO_CONFIG_VAL  0x10u   /* ±1000 dps -> 32.8 LSB/(deg/s) */
 #define ACCEL_CONFIG_VAL 0x10u   /* ±8g -> 4096 LSB/g */
 
 #define ACCEL_LSB_PER_G  4096.0f
+
+/* 加速度计刻度修正（2026-11-19 加入）
+ * 本模块实测静止 |a| = 0.79~0.87g（均值约 0.80g），见 data/test_records.csv IMU0 行：
+ * 仿制芯片刻度偏松约 20%。pitch/roll 用轴间比值计算，不受此偏差影响；
+ * 但 |a| 本身是"静止应为 1g"的自检量，也参与姿态融合的绝对门限，
+ * 故按实测比例把读数放大 1/0.80 = 1.25 倍。
+ * 换正品 GY-521 后把此值改回 1.0f 并重新测 10 分钟确认。
+ */
+#define ACCEL_SCALE_CORR 1.25f
+
 #define RAD2DEG          57.29578f
 
-#define GAP_WARN_US      15000u  /* acceptance condition: no consecutive sampling gap >15 ms */
+#define GAP_WARN_US      15000u  /* 验收条件：不得出现>15ms连续采样空档 */
 #define CAL_SECONDS      10u
-#define CAL_TARGET       (CAL_SECONDS * 200u) /* 10s @ 200Hz = 2000 samples */
+#define CAL_TARGET       (CAL_SECONDS * 200u) /* 10s @ 200Hz = 2000样本 */
 
-/* ---- interrupt-side statistics (written only from the ISR) ---- */
+/* ---- 中断侧统计（仅在中断里写） ---- */
 static volatile uint32_t irq_count;
 static volatile uint32_t max_gap_us;
 static volatile uint32_t gap_over_15ms;
@@ -109,7 +112,7 @@ static void mpu_irq(uint gpio, uint32_t events)
     data_ready = true;
 }
 
-/* ---- MPU6050 low level ---- */
+/* ---- MPU6050 底层 ---- */
 static int mpu_write(uint8_t reg, uint8_t val)
 {
     uint8_t buf[2] = { reg, val };
@@ -135,7 +138,7 @@ static int mpu_detect(void)
         mpu_addr_found = addrs[i];
         int st = mpu_read(REG_WHO_AM_I, &who, 1);
         if (st >= 0) {
-            return (int)who; /* device detected; the caller verifies the value */
+            return (int)who; /* 检测到器件，由调用方核对值 */
         }
     }
     return -1;
@@ -143,7 +146,7 @@ static int mpu_detect(void)
 
 int main(void)
 {
-    /* This level drives no outputs, but keeps the same power-up safety convention as level 3 */
+    /* 本级不驱动任何输出，但保持与第3级相同的上电安全约定 */
     for (uint p = 6u; p <= 9u; p++) {
         gpio_init(p);
         gpio_set_dir(p, GPIO_OUT);
@@ -161,21 +164,23 @@ int main(void)
     watchdog_enable(2000u, 1);
 
     printf("\n[sr71imu] level4 mpu6050 | board=pico2\n");
+    printf("[sr71imu] accel scale correction x%.3f (module-specific; rest should read |a|=1.0g)\n",
+           (double)ACCEL_SCALE_CORR);
 
-    /* I2C0 @400kHz on GP4/GP5; the module has onboard 2.2k pull-ups, the internal pull-ups add one more layer of safety */
+    /* I2C1 @400kHz，GP4/GP5；模块自带2.2k上拉，内部上拉再开一层保险 */
     i2c_init(I2C_PORT, 400u * 1000u);
     gpio_set_function(PIN_SDA, GPIO_FUNC_I2C);
     gpio_set_function(PIN_SCL, GPIO_FUNC_I2C);
     gpio_pull_up(PIN_SDA);
     gpio_pull_up(PIN_SCL);
 
-    /* INT rising-edge interrupt */
+    /* INT 上升沿中断 */
     gpio_init(PIN_INT);
     gpio_set_dir(PIN_INT, GPIO_IN);
     gpio_pull_down(PIN_INT);
     gpio_set_irq_enabled_with_callback(PIN_INT, GPIO_IRQ_EDGE_RISE, true, &mpu_irq);
 
-    /* Reset and configure (the module may fail to ACK for the first few hundred ms after power-up; retry a few times) */
+    /* 复位并配置（模块刚上电可能前几百 ms 不应答，重试几次） */
     int who = -1;
     for (int attempt = 0; attempt < 10 && who < 0; attempt++) {
         who = mpu_detect();
@@ -187,7 +192,7 @@ int main(void)
         printf("[sr71imu] FAIL: no ACK on 0x%02x/0x%02x, check wiring VCC=3V3 GND SDA=GP4 SCL=GP5 INT=GP3\n",
                MPU_ADDR, MPU_ADDR_ALT);
         for (;;) {
-            gpio_put(PICO_DEFAULT_LED_PIN, (time_us_32() >> 7) & 1u); /* fast blink = fault */
+            gpio_put(PICO_DEFAULT_LED_PIN, (time_us_32() >> 7) & 1u); /* 快闪=故障 */
             watchdog_update();
             sleep_ms(50);
         }
@@ -198,21 +203,21 @@ int main(void)
 
     mpu_write(REG_PWR_MGMT_1, 0x80u);  /* device reset */
     sleep_ms(100);
-    mpu_write(REG_PWR_MGMT_1, 0x01u);  /* clock source = gyro X-axis PLL */
+    mpu_write(REG_PWR_MGMT_1, 0x01u);  /* 时钟源=陀螺X轴PLL */
     sleep_ms(10);
-    mpu_write(REG_PWR_MGMT_2, 0x00u);  /* all axes enabled */
+    mpu_write(REG_PWR_MGMT_2, 0x00u);  /* 全轴使能 */
     mpu_write(REG_SMPLRT_DIV, SMPLRT_DIV_VAL);
     mpu_write(REG_CONFIG, CONFIG_VAL);
     mpu_write(REG_GYRO_CONFIG, GYRO_CONFIG_VAL);
     mpu_write(REG_ACCEL_CONFIG, ACCEL_CONFIG_VAL);
-    mpu_write(REG_INT_PIN_CFG, 0x20u); /* INT latched until INT_STATUS is read; active-high push-pull */
+    mpu_write(REG_INT_PIN_CFG, 0x20u); /* INT锁存至读INT_STATUS，高有效推挽 */
     mpu_write(REG_INT_ENABLE, 0x01u);  /* DATA_RDY */
 
     uint32_t cal_count = 0;
     int64_t cal_gx = 0, cal_gy = 0, cal_gz = 0;
     int16_t off_gx = 0, off_gy = 0, off_gz = 0;
     bool calibrated = false;
-    bool calibrating = true; /* the first calibration starts automatically at power-up */
+    bool calibrating = true; /* 上电自动开始首次校准 */
 
     printf("[sr71imu] gyro calibration: KEEP STILL for %us starting now...\n",
            (unsigned)CAL_SECONDS);
@@ -232,7 +237,7 @@ int main(void)
             data_ready = false;
 
             uint8_t st = 0, d[14];
-            mpu_read(REG_INT_STATUS, &st, 1);      /* reading clears the latch */
+            mpu_read(REG_INT_STATUS, &st, 1);      /* 读后清锁存 */
             if (st & 0x80u) {
                 fifo_ovf_count++;
             }
@@ -275,11 +280,11 @@ int main(void)
                     gz -= off_gz;
                 }
 
-                float axg = (float)ax / ACCEL_LSB_PER_G;
-                float ayg = (float)ay / ACCEL_LSB_PER_G;
-                float azg = (float)az / ACCEL_LSB_PER_G;
+                float axg = (float)ax / ACCEL_LSB_PER_G * ACCEL_SCALE_CORR;
+                float ayg = (float)ay / ACCEL_LSB_PER_G * ACCEL_SCALE_CORR;
+                float azg = (float)az / ACCEL_LSB_PER_G * ACCEL_SCALE_CORR;
                 float amag = sqrtf(axg * axg + ayg * ayg + azg * azg);
-                /* Angles are accelerometer-based, for axis-check interpretation only; the airframe mounting orientation is confirmed manually */
+                /* 角度基于加速度计，仅供轴向核对判读；机体安装方向由人工确认 */
                 float pitch = atan2f(-axg, sqrtf(ayg * ayg + azg * azg)) * RAD2DEG;
                 float roll  = atan2f(ayg, azg) * RAD2DEG;
                 float tempc = (float)tr / 340.0f + 36.53f;
@@ -291,7 +296,7 @@ int main(void)
                     stream_lines++;
                 }
 
-                /* the 500 ms summary is printed in one place below; keep only the most recent attitude quantities here */
+                /* 每500ms的简报在下面统一打；这里只留最近一次的姿态量 */
                 static float s_amag, s_pitch, s_roll, s_temp;
                 static int16_t s_gx, s_gy, s_gz;
                 s_amag = amag; s_pitch = pitch; s_roll = roll; s_temp = tempc;

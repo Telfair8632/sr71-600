@@ -1,6 +1,6 @@
 # Project Roadmap
 
-Single source of truth for the build plan, current status, and the gates between phases. Status date: **2026-10-21**.
+Single source of truth for the build plan, current status, and the gates between phases. Status date: **2026-11-19**.
 
 ## 1. Phase Plan
 
@@ -19,7 +19,8 @@ Single source of truth for the build plan, current status, and the gates between
 | D11 | 1400 mm version 2 | DEFERRED | Separate budget and design after the small version passes |
 | F01 | Pico firmware debug levels 3–4 | **DONE** | Level 3 PASS 2026-10-07 (30-min soak, watchdog); level 4 PASS 2026-10-13 (MPU-6050 @ 200 Hz, 10-min log). Ladder continues as RX0/PWM0/... rows in `data/test_records.csv` |
 | F02 | Pico firmware debug level 6 (four-channel PWM) | FIRMWARE COMPILED | Compiled 2026-10-19 (`firmware/level6_pwm/`), flash + logic-analyzer verification on the Pico pin side still pending — see `docs/debug_log_2026-10-19.md` |
-| P01 | E1 power-distribution PCB (v2 board) | **ORDERED** | Designed and verified 2026-10-20/21 (ERC 0, 27/27 net match, DRC 0/0, dual release review); ordered from JLC 2026-10-21 (5 boards, ~CNY 150–250, ETA 5–7 days) — see `pcb/e1_power_dist_2s/` and `docs/log_2026-10-21_e1_pcb.md` |
+| P01 | E1 power-distribution PCB (V1.1 board) | **RECEIVED** | Designed/verified 2026-10-20/21, ordered 2026-10-21, **received 2026-11-19**. Bare-board continuity verified against the netlist; two separate grounds confirmed (`BATT_N` vs `GND`, joined externally through the UBEC). Three items still missing before assembly (4 × 5.0 mm terminals, XT30 board connector, 1×5 SIP adapter for U2). Becomes the bench board — see `docs/pcb_v1_1_wiring.md` |
+| P02 | SMD flight-control board V2 (`sr71_ctrl_v2`) | **DESIGNED** | 65 × 85 mm, 1.0 mm, 1 oz, 37 SMD parts, 25 nets routed, DRC 0/0; hand-soldering reduced to 2 pads (XT30 power entry). Not ordered — LCSC part numbers and CPL format to finish. See `pcb/sr71_ctrl_v2/`, `docs/pcb_v2_smd_design.md` |
 
 ## 2. Firmware Verification Ladder
 
@@ -31,7 +32,7 @@ The staged program is defined in `docs/debug_procedure.md` — no level starts u
 | 1 | Unpowered electrical checks | TODO |
 | 2 | BEC and the 5 V bus | TODO |
 | 3 | Pico minimal firmware (heartbeat, 1 ms tick, watchdog) | **PASS** 2026-10-07 |
-| 4 | MPU-6050 IMU (WHO_AM_I, calibration, 200 Hz stream) | **PASS** 2026-10-13, 1 known issue |
+| 4 | MPU-6050 IMU (WHO_AM_I, calibration, 200 Hz stream) | **PASS** 2026-10-13; scale correction added to firmware 2026-11-19 (re-check `\|a\|` only) |
 | 5 | RP1 receiver and transmitter binding | TODO (radio system not yet delivered) |
 | 6 | Four-channel PWM output waveforms & buffer safety | Firmware compiled 2026-10-19; flash + logic-analyzer verification pending |
 | 7 | Servos, mixing, stabilization direction | TODO |
@@ -44,22 +45,25 @@ The staged program is defined in `docs/debug_procedure.md` — no level starts u
 
 ## 3. Immediate Next Actions
 
-Board bring-up (milestone B), firmware verification, and PCB assembly prep are running in parallel while waiting for deliveries:
+The V1.1 board is on the bench; the V2 SMD board is designed and waiting for an order. In parallel:
 
-1. **When the PCB arrives (≈5–7 days from 2026-10-21)**: work through the per-refdes assembly checklist; multimeter check that BATT+/− is isolated from 5V/GND before populating; solder order resistors → small capacitors → electrolytic → DIP-14 socket → Pico headers → pin headers → XT30/terminals; leave R17/R18 unpopulated.
-2. **Perfboard photo review**: GND bus + C2/C3 solder joints (focus: C2 electrolytic polarity — reversed polarity under power will burst it). Once passed, solder the resistors, pin headers, C6, and the DIP-14 sockets → insert the AHCT125 → multimeter recheck (no 5 V–GND short, OE_N ≈ 5 V, all four Y ≈ 0 V) → close out milestone B; solder Q1 with the arrived LCSC parts.
-3. **Level-6 firmware**: flash `sr71fc_level6.uf2` and run the logic-analyzer pre-verification on the Pico pin side (checklist in `firmware/README.md`) — needs no radio.
-4. **Radio system**: order the RadioMaster Pocket (**ELRS version, not multi-protocol**) + RP1 V2 (~CNY 450). When the receiver arrives: level 7 (CRSF link); macro-photo U2's pin-1 marking before soldering it anywhere.
-5. **Battery**: smell re-check + first-charge health inspection once the replacement charger arrives; measure the delivered hardware (motor hole patterns, screw lengths, propeller shaft fit) and adapt the affected drawings.
+1. **V1.1 board (bench)**: buy the three missing items (4 × 5.0 mm terminal blocks, XT30 board connector, 1×5 SIP adapter for U2, or jumper J10.3→J12.2 and skip U2), then solder in the order resistors → capacitors → connectors → Pico sockets. Before first power: `J4.2 ↔ J5.2` must read ~0 Ω (the two grounds join through the UBEC), and C1/C2 must be fitted with `+` on the round pad.
+2. **V2 board (flight)**: add LCSC part numbers to `pcb/sr71_ctrl_v2/fab/assembly/bom_sr71_ctrl_v2.csv`, check the CPL orientation in the JLCPCB uploader, then order 5 boards (1.0 mm, 1 oz, single-side SMT).
+3. **Level-6 firmware**: flash `sr71fc_level6.uf2` and run the logic-analyser pre-verification on the Pico pin side (checklist in `firmware/README.md`) — needs no radio. The UF2 was rebuilt and verified byte-identical on 2026-11-19.
+4. **Radio system**: order the RadioMaster Pocket (**ELRS version, not multi-protocol**) + RP1 V2. When the receiver arrives: level 5 (CRSF link).
+5. **Level 4 re-check**: flash the corrected level-4 build and confirm `|a| ≈ 1.0 g` (the other six criteria already passed).
 
 ## 4. Known Issues Register
 
 | # | Issue | Impact | Disposition |
 |---|---|---|---|
-| KI-1 | MPU-6050 accelerometer reads ~20% low (static \|a\| = 0.79–0.87 g vs expected 1.0 g); clone chip or residual effect of the earlier reverse-power incident | None on pitch/roll (ratio-based); gyro unaffected | Add a 1/0.80 scale correction in firmware before installation, or replace with a genuine GY-521 module |
+| KI-1 | MPU-6050 accelerometer reads ~20% low (static \|a\| = 0.79–0.87 g vs expected 1.0 g); clone chip or residual effect of the earlier reverse-power incident | None on pitch/roll (ratio-based); gyro unaffected | **Mitigated 2026-11-19**: ×1.25 (1/0.80) scale correction added to `firmware/level4_imu/main.c` and the UF2 rebuilt; re-check `\|a\| ≈ 1.0 g`. Revert to 1.0 if the module is replaced with a genuine GY-521 |
 | KI-2 | Dimensioned hole positions are nominal, not measured | CAD-to-part fit risk | Resolve in D02/D05 before final assembly |
 | KI-3 | C3 measures ~49 nF vs 100 nF nominal (measured 2026-10-20); C2 not yet measured individually | None — adequate as decoupling, retained | Re-measure C2 across the two buses on the 2000 µF range (expected 400–550 µF) at the next board session |
 | KI-4 (resolved) | Hardware check-in guide §5.4 listed the U2 (SN74LVC1G17) pin order shifted by one pin | None — U2 not yet soldered | Corrected 2026-10-21 in both the English guide and the Chinese original: 1=NC, 2=A, 3=GND, 4=Y, 5=VCC; verify against the datasheet before soldering |
+| KI-5 | V1.1 board's U2 footprint is a 1×5 SIP socket, while the purchased SOT-23-5 adapter is dual-row and cannot plug in | U2 (receiver buffer) cannot be fitted as planned | Buy a SOT-23-5 → SIP-5 adapter, dead-bug the chip onto the socket holes, or bypass U2 with a wire between J10.3 and J12.2 (RP1 is 3.3 V; loses the buffer) |
+| KI-6 | V1.1 still lacks 4 × 5.0 mm terminal blocks (J2–J5) and the XT30 board connector (J1) | Board cannot be wired up yet | Order them, or solder wires directly into the through-hole pads |
+| KI-7 | V1.1 assembled mass ≈ 60–70 g against a 190.7 g aircraft budget (bare board ≈ 30 g) | Mass margin almost exhausted | V2 SMD board (P02) reduces the bare board to ≈14 g and the assembled board to ≈31 g; the electronics mass budget in the BOM should be re-baselined |
 
 ## 5. Version 2 (1400 mm) Gate
 

@@ -15,10 +15,11 @@ A fully independent engineering project: the complete digital build package, fir
 | Manufacturing templates (14 laser-cut DXF, 8 printed STL, 1:1 print sheets) | Done | `cut/`, `print/`, `docs/cutting_templates_1to1.pdf` |
 | Circuit design (E1) | Done | `docs/circuit_design.md`, `electronics/` |
 | Firmware level 3 — minimal firmware, 30-min soak + watchdog | **PASS** (2026-10-07) | `data/test_records.csv` row PICO0, `firmware/scripts/soak_level3_*.log` |
-| Firmware level 4 — MPU-6050 IMU @ 200 Hz, 10-min log | **PASS** (2026-10-13, 1 known issue) | `data/test_records.csv` row IMU0, `firmware/scripts/imu_10min.csv` |
-| Firmware level 6 — four-channel 50 Hz PWM | Compiled (2026-10-19), verification pending | `firmware/level6_pwm/`, `docs/debug_log_2026-10-19.md` |
-| E1 power-distribution PCB (v2 board) | Designed, verified, **ordered 2026-10-21** (JLC, 5 boards) | `pcb/e1_power_dist_2s/`, `docs/log_2026-10-21_e1_pcb.md` |
-| Physical build & flight test | In progress — control-board soldering started (milestone B: 5 V/GND buses + capacitors soldered, photo review pending) | `docs/debug_log_2026-10-19.md`, `ROADMAP.md` |
+| Firmware level 4 — MPU-6050 IMU @ 200 Hz, 10-min log | **PASS** (2026-10-13); accelerometer scale error corrected in firmware 2026-11-19 | `data/test_records.csv` row IMU0, `firmware/scripts/imu_10min.csv`, `docs/debug_log_2026-11-19.md` |
+| Firmware level 6 — four-channel 50 Hz PWM | Compiled (2026-10-19), artifact verified reproducible; flash + logic-analyser verification pending | `firmware/level6_pwm/`, `docs/debug_log_2026-10-19.md` |
+| E1 power-distribution PCB (V1.1) | **Received 2026-11-19, bare board verified by continuity**, assembly pending (3 parts still missing) | `pcb/e1_power_dist_2s/`, `docs/pcb_v1_1_wiring.md` |
+| SMD flight-control board V2 | **Designed 2026-11-19**: 65 × 85 mm, 37 SMD parts, routed, DRC 0/0; ordering pending | `pcb/sr71_ctrl_v2/`, `docs/pcb_v2_smd_design.md` |
+| Physical build & flight test | In progress — V1.1 becomes the bench board; the V2 SMD board is the flight-intent board | `docs/debug_log_2026-11-19.md`, `ROADMAP.md` |
 
 ## Repository Layout
 
@@ -30,8 +31,9 @@ print/              8 3D-printed parts (motor saddles, fin saddles, control horn
 docs/               engineering report, assembly instructions, circuit design,
                     staged debug procedure, debug logs, assessments, learning path
 electronics/        wiring diagram (SVG) and netlist (CSV), revision E1
-pcb/                E1 power-distribution PCB (v2): KiCad sources, fabrication
-                    release package (Gerbers, CPL, BOM), board render
+pcb/                two boards: e1_power_dist_2s (V1.1, through-hole, received) and
+                    sr71_ctrl_v2 (V2, SMD, 65 x 85 mm) — KiCad sources, Gerbers,
+                    CPL, BOM, renders
 firmware/           Pico 2 (RP2350) firmware: level3_minimal, level4_imu, level6_pwm,
                     bus_doctor, plus the automated acceptance scripts and raw test logs
 data/               BOM, procurement budget, test records, measurement records,
