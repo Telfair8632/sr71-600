@@ -4,6 +4,8 @@ The printed-circuit-board implementation of the aircraft's E1 control and power 
 
 **Status: routed, verified, and ordered for fabrication on 2026-10-21** (JLC, 5 boards, delivery expected in 5–7 days). Design log: `docs/log_2026-10-21_e1_pcb.md`.
 
+**Update 2026-11-19:** the boards arrived and the bare-board continuity was verified against the netlist. This board is now the **bench board**; it carries the battery distribution and two separate grounds (joined externally through the UBEC). Wiring reference and known blockers: `docs/pcb_v1_1_wiring.md`. The SMD successor (no on-board power distribution, 2 hand-soldered pads) is in `pcb/sr71_ctrl_v2/`.
+
 ## Board Specification
 
 | Parameter | Value |
